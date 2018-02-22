@@ -45,10 +45,10 @@ jQuery(document).ready(function ($) {
 	*	Colorbox
 	*
 	------------------------------------*/
-	$('a.gallery').colorbox({
+	$('a.pop').colorbox({
 		rel:'gal',
 		width: '80%', 
-		height: '80%'
+		inline:true
 	});
 	
 	/*

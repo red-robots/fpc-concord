@@ -13,21 +13,35 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) : the_post(); ?>
 
-				get_template_part( 'template-parts/content', 'page' );
+			<section class="intro">
+				<?php the_content(); ?>
+			</section>
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+			<?php if(have_rows()) : ?>
+			<section class="sections">
+				<?php while(have_rows()) : the_row() 
+					$copy = get_sub_row(); 
+					$img = get_sub_row('side_image'); 
+				?>
+					<div class="section">
+						<div class="copy">
+							<?php echo $copy; ?>
+						</div>
+						<div class="img">
+							<img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+						</div>
+					</div>
+				<?php endwhile; ?>
+			</section>
+			<?php endif; ?>
 
-			endwhile; // End of the loop.
+			<?php endwhile; // End of the loop.
 			?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
