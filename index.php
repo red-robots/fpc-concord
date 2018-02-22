@@ -96,7 +96,15 @@ if( $banner !='' ) {
 		</section>
 
 		<section class="upcoming-events">
-			<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+			<?php
+			$wp_query = new WP_Query();
+			$wp_query->query(array(
+				'post_type'=>'event',
+				'posts_per_page' => 4,
+				'paged' => $paged,
+			));
+			if ($wp_query->have_posts()) : ?>
+		    <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 				<div class="event-box">
 					<a href="<?php the_permalink(); ?>">
 						<img src="">
