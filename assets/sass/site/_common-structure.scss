@@ -16,7 +16,19 @@ div {
 		padding: 0px;
 	}
 }
-
+.wrapper-page {
+	width: 100%;
+	margin: 0px auto;
+	padding: 20px;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 90%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width:70%;
+		padding: 0px;
+	}
+}
 .content-area {
 	width: 100%;
 	margin: 0px auto;
@@ -94,6 +106,7 @@ section.top-header {
 header#masthead {
 	width: 100%;
 	text-align: center;
+	position: relative;
 }
 /* Logo */
 .logo , h1.logo {
@@ -125,7 +138,16 @@ header#masthead {
 	width: 100%;
 	clear: both;
 }
+
 footer.site-footer {
 	width: 100%;
 	clear:both;
+	text-align: center;
+	padding: 40px 0;
+}
+.bottom-red {
+	width: 100%;
+	clear: both;
+	height: 10px;
+	background-color: $color-red;
 }

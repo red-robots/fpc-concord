@@ -80,12 +80,22 @@ jQuery(document).ready(function ($) {
 
 	/*
 	*
-	*	Nice Page Scroll
+	*	Sticky Nav
 	*
 	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
+	$(function () {
+	   $('.sticker').stickyNavbar();
 	});
+
+	// var header = $("#site-navigation");
+ //  	$(window).scroll(function() {    
+ //    var scroll = $(window).scrollTop();
+ //       if (scroll >= 1) {
+ //          header.addClass("fix-nav");
+ //        } else {
+ //          header.removeClass("fix-nav");
+ //        }
+	// });	
 	
 	
 	/*

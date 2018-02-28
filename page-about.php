@@ -8,10 +8,10 @@
  */
 
 get_header(); ?>
-
+asfdasfa
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+			<div class="wrapper-page">
 			<?php
 			while ( have_posts() ) : the_post(); ?>
 
@@ -24,7 +24,7 @@ get_header(); ?>
 			<?php
 			$wp_query = new WP_Query();
 			$wp_query->query(array(
-				'post_type'=>'event',
+				'post_type'=>'staff',
 				'posts_per_page' => -1,
 				'paged' => $paged,
 			));
@@ -47,7 +47,7 @@ get_header(); ?>
 		    		</a>
 		    	</div>
 		    <?php endwhile; endif; // End of the loop. ?>
-
+		    </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

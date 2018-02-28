@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About
+ * Template Name: Staff
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -9,13 +9,14 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
-
+		<div class="wrapper-page">
 			<?php
 			while ( have_posts() ) : the_post(); ?>
 
 				<section class="intro">
+					<h1><?php the_title(); ?></h1>
 					<?php the_content(); ?>
 				</section>
 
@@ -24,11 +25,12 @@ get_header(); ?>
 			<?php
 			$wp_query = new WP_Query();
 			$wp_query->query(array(
-				'post_type'=>'event',
+				'post_type'=>'staff',
 				'posts_per_page' => -1,
 				'paged' => $paged,
 			));
 			if ($wp_query->have_posts()) : ?>
+			<section class="staff">
 		    <?php while ($wp_query->have_posts()) : $wp_query->the_post(); 
 
 		    	$email = get_field('email');
@@ -41,22 +43,28 @@ get_header(); ?>
 
 		    ?>
 		    	<div class="staff-card">
-			    	<a href="#<?php echo $dashedTitle; ?>" class="pop">
+			    	<a href="#pop-<?php echo $dashedTitle; ?>" class="pop">
 			    		<img src="<?php echo $picture['url']; ?>" alt="<?php echo $picture['url']; ?>">
 			    		<h3><?php the_title(); ?></h3>
 			    		<h4 class="title"><?php echo $pTitle; ?></h4>
 			    		<div class="email">
-			    			<a href="<?php echo $spammed; ?>"><?php echo $spammed; ?></a>
+			    			<a href="<?php echo $spammed; ?>"><i class="fas fa-envelope fa-lg"></i></a>
 			    		</div>
 		    		</a>
 		    	</div>
 		    	<div style="display: none;">
-			    	<div id="<?php echo $dashedTitle; ?>">
-			    		<?php echo $bio; ?>
+			    	<div id="pop-<?php echo $dashedTitle; ?>" class="pop-bio">
+			    	<div class="nav"></div>
+			    	<div class="pop-wrap">
+			    		<div class="pic"><img src="<?php echo $picture['url']; ?>" alt="<?php echo $picture['url']; ?>"></div>
+			    		<div class="bio"><?php echo $bio; ?></div>
+			    	</div>
 			    	</div>
 		    	</div>
-		    <?php endwhile; endif; // End of the loop. ?>
-
+		    <?php endwhile; ?>
+		    </section>
+		<?php endif; // End of the loop. ?>
+		    </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
