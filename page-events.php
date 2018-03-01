@@ -1,8 +1,6 @@
 <?php
 /**
- * Template Name: Sermons
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * Template Name: Events
  *
  * @package ACStarter
  */
@@ -14,20 +12,25 @@ get_header(); ?>
 			<div class="wrapper-page">
 			<?php
 			while ( have_posts() ) : the_post(); ?>
+
 				<section class="intro">
+					<h1><?php the_title(); ?></h1>
 					<?php the_content(); ?>
 				</section>
-			<?php endwhile; // End of the loop. ?>
+
+			<?php endwhile; // End of the loop.
+			?>
+
 
 			<?php
 			$wp_query = new WP_Query();
 			$wp_query->query(array(
-				'post_type'=>'sermon',
+				'post_type'=>'event',
 				'posts_per_page' => -1,
 				'paged' => $paged,
 			));
 			if ($wp_query->have_posts()) : ?>
-			<section class="sermons">
+			<section class="events">
 		    <?php while ($wp_query->have_posts()) : $wp_query->the_post(); 
 
 		    	// get raw date
@@ -43,26 +46,9 @@ get_header(); ?>
 
 		    ?>
 
-		    <div class="sermon-row">
-		    	<h2><?php echo $pTitle; ?></h2>
-		    	<div class="date"><?php echo $date->format('j M Y'); ?></div>
-		    	<div class="passage"><?php echo $passage; ?></div>
-		    	<div class="minister"><?php echo $minister; ?></div>
-		    	<div class="watch">
-		    		<a href="<?php echo $watch; ?>">
-		    			<i class="fas fa-video fa-lg"></i>
-		    		</a>
-		    	</div>
-		    	<div class="download">
-		    		<a href="<?php echo $download; ?>">
-		    			<i class="fas fa-cloud-download-alt fa-lg"></i>
-		    		</a>
-		    	</div>
-		    </div>
-
-				<?php endwhile; ?>
-				</section>
-			<?php endif; ?>
+			<?php endwhile; ?>
+			</section>
+		<?php endif; ?>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

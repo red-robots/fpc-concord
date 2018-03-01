@@ -96,6 +96,7 @@ if( $banner !='' ) {
 		</section>
 
 		<section class="upcoming-events">
+			<div class="eventwrapper">
 			<?php
 			$wp_query = new WP_Query();
 			$wp_query->query(array(
@@ -104,17 +105,35 @@ if( $banner !='' ) {
 				'paged' => $paged,
 			));
 			if ($wp_query->have_posts()) : ?>
-		    <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-				<div class="event-box">
+		    <?php while ($wp_query->have_posts()) : $wp_query->the_post(); 
+
+		   		 // get raw date
+				$date = get_field('date', false, false);
+				// make date object
+				$date = new DateTime($date);
+				// example: echo $date->format('j M Y');
+				// echo '<pre>';
+				// print_r($date);
+				// echo '</pre>';
+
+		    ?>
+				<div class="event-card">
 					<a href="<?php the_permalink(); ?>">
-						<img src="">
+					<?php if ( has_post_thumbnail() ) {
+							the_post_thumbnail();
+						}  ?>
+						
 						<h3><?php the_title(); ?></h3>
-						<div class="date">
-							date
+						<div class="datetime">
+							<?php echo $date->format('j M Y | g:i A'); ?>
 						</div>
 					</a>
 				</div>
 			<?php endwhile; endif; wp_reset_postdata(); ?>
+			</div>
+			<div class="btn allevents">
+				<a href="<?php bloginfo('url'); ?>/events">All Events</a>
+			</div>
 		</section>
 
 
