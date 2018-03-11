@@ -367,3 +367,134 @@ section.sections {
 		}
 	}
 }
+section.sermons {
+	width: 100%;
+	float: left;
+	.month-sep {
+		width: 100%;
+		float: left;
+		color: #fff;
+		background-color: $color-green;
+		padding: 10px;
+	}
+	.sermon-row {
+		width: 100%;
+		border-bottom: 4px solid $color-red;
+		padding: 2%;
+		background-color: #efefef;
+		overflow: hidden;
+		@media screen and (min-width: $tabwidth) {
+			flex-wrap: nowrap;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.date {
+			height: 64px;
+		    width: 64px;
+		    font-size: 18px;
+		    line-height: 1;
+		    text-transform: uppercase;
+		    position: relative;
+		    overflow: hidden;
+		    
+		    @media screen and (min-width: $tabwidth) {
+		    	flex-basis: 10%;
+			}
+			&:before {
+				background: url(images/slash.svg) no-repeat scroll center center rgba(#000,0);
+			    content: "";
+			    height: 130%;
+			    left: 5px;
+			    position: absolute;
+			    top: -5px;
+			    transform: rotate(20deg);
+			    width: 70%;
+			}
+			.month {
+				top: 0;
+			    position: absolute;
+			    left: 0;
+			}
+			.day {
+				bottom: 0;
+			    position: absolute;
+			    right: 0;
+			}
+			
+		}
+		.sermon {
+			text-align: left;
+			color: $color-red;
+			
+			padding: 0 0 0 2%;
+			width: 100%;
+			@media screen and (min-width: $tabwidth) {
+				flex-basis: 50%;
+				width: auto;
+				border-left: 2px solid $color-red;
+			}
+			h3 {
+				font-size: 18px; 
+			}
+			
+			h4 {
+				font-size: 14px; 
+			}
+			
+			h4, h3 {
+				letter-spacing: 0px;
+				margin: 0 0 10px 0;
+			}
+
+			
+		}
+		.passage {
+			width: 45%;
+			float: left;
+			@media screen and (min-width: $tabwidth) {
+				flex-basis: 25%;
+				width: auto;
+				float: none;
+			}
+		}
+		.minister {
+
+		}
+		.downloads {
+			width: 45%;
+			float: right;
+			@media screen and (min-width: $tabwidth) {
+				flex-basis: 10%;
+				width: auto;
+				float:none;
+			}
+		}
+		.watch {
+			width: 50%;
+			transform: scale(1);
+		}
+		.download {
+			width: 50%;
+		}
+		.watch, .download {
+			float: left;
+			padding: 2%;
+			@media screen and (min-width: $tabwidth) {
+				float:none;
+			}
+			i {
+				transform: scale(1);
+				@include transition(all ease .3s);
+			}
+			
+			@include transition(all ease .3s);
+			&:hover {
+				i {
+					transform: scale(1.3);
+				}
+			}
+		}
+	}
+}

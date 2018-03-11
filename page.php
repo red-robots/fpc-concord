@@ -12,21 +12,25 @@
  * @package ACStarter
  */
 
-get_header(); ?>
+get_header(); 
+
+while ( have_posts() ) : the_post(); 
+	get_template_part('template-parts/page-banner');
+	$theContent = get_the_content();
+endwhile; // End of the loop.
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="wrapper-page">
-			<?php
-			while ( have_posts() ) : the_post(); ?>
+			
 
 				<section class="intro">
 					<h1><?php the_title(); ?></h1>
-					<?php the_content(); ?>
+					<?php echo $theContent; ?>
 				</section>
 
-			<?php endwhile; // End of the loop.
-			?>
+			
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

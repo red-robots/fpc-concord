@@ -1674,7 +1674,7 @@ a{color:#0999f3;text-decoration:none}
 a:hover,a:focus,a:active{color:midnightblue}
 a:focus{outline:thin dotted}
 a:hover,a:active{outline:0}
-.sticker{width:100%;position:relative;background-color:rgba(255,255,255,0.9)}
+.sticker{width:100%;position:relative;background-color:rgba(255,255,255,0.9);border-bottom:5px solid #c2c66a}
 .sticker.sticky{top:0;left:0;border-bottom:5px solid #c2c66a}
 .sticker .main-navigation{margin-bottom:0}
 .main-navigation{clear:both;display:block;text-align:center;width:100%}
@@ -1799,12 +1799,14 @@ html[xmlns] .flexslider .slides{display:block}
 .flex-direction-nav .flex-next{opacity:1;right:10px}
 }.widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
+.widget h2{font-size:16px}
+.widget ul,.widget li{list-style-type:none}
 *{-webkit-hyphens:none}
 .clear{clear:both}
 .wrapper{width:100%;margin:0 auto;padding:20px}
 @media screen and (min-width:600px){.wrapper{width:100%}
 }@media screen and (min-width:1200px){.wrapper{width:90%;padding:0}
-}.wrapper-page{width:100%;margin:0 auto;padding:20px}
+}.wrapper-page{width:100%;margin:0 auto;padding:20px;margin-top:30px}
 @media screen and (min-width:600px){.wrapper-page{width:90%}
 }@media screen and (min-width:1200px){.wrapper-page{width:70%;padding:0}
 }.content-area{width:100%;margin:0 auto}
@@ -1898,7 +1900,31 @@ section.sections .section .copy{width:100%}
 @media screen and (min-width:600px){section.sections .section .copy{width:60%;float:left}
 }section.sections .section .img{width:100%}
 @media screen and (min-width:600px){section.sections .section .img{width:30%;float:right}
-}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+}section.sermons{width:100%;float:left}
+section.sermons .month-sep{width:100%;float:left;color:#fff;background-color:#c2c66a;padding:10px}
+section.sermons .sermon-row{width:100%;border-bottom:4px solid #591a2b;padding:2%;background-color:#efefef;overflow:hidden}
+@media screen and (min-width:600px){section.sermons .sermon-row{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+}section.sermons .sermon-row .date{height:64px;width:64px;font-size:18px;line-height:1;text-transform:uppercase;position:relative;overflow:hidden}
+@media screen and (min-width:600px){section.sermons .sermon-row .date{-webkit-flex-basis:10%;-ms-flex-preferred-size:10%;flex-basis:10%}
+}section.sermons .sermon-row .date:before{background:url(images/slash.svg) no-repeat scroll center center transparent;content:"";height:130%;left:5px;position:absolute;top:-5px;-webkit-transform:rotate(20deg);-ms-transform:rotate(20deg);transform:rotate(20deg);width:70%}
+section.sermons .sermon-row .date .month{top:0;position:absolute;left:0}
+section.sermons .sermon-row .date .day{bottom:0;position:absolute;right:0}
+section.sermons .sermon-row .sermon{text-align:left;color:#591a2b;padding:0 0 0 2%;width:100%}
+@media screen and (min-width:600px){section.sermons .sermon-row .sermon{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;width:auto;border-left:2px solid #591a2b}
+}section.sermons .sermon-row .sermon h3{font-size:18px}
+section.sermons .sermon-row .sermon h4{font-size:14px}
+section.sermons .sermon-row .sermon h4,section.sermons .sermon-row .sermon h3{letter-spacing:0;margin:0 0 10px 0}
+section.sermons .sermon-row .passage{width:45%;float:left}
+@media screen and (min-width:600px){section.sermons .sermon-row .passage{-webkit-flex-basis:25%;-ms-flex-preferred-size:25%;flex-basis:25%;width:auto;float:none}
+}section.sermons .sermon-row .downloads{width:45%;float:right}
+@media screen and (min-width:600px){section.sermons .sermon-row .downloads{-webkit-flex-basis:10%;-ms-flex-preferred-size:10%;flex-basis:10%;width:auto;float:none}
+}section.sermons .sermon-row .watch{width:50%;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+section.sermons .sermon-row .download{width:50%}
+section.sermons .sermon-row .watch,section.sermons .sermon-row .download{float:left;padding:2%;-webkit-transition:all ease .3s;transition:all ease .3s}
+@media screen and (min-width:600px){section.sermons .sermon-row .watch,section.sermons .sermon-row .download{float:none}
+}section.sermons .sermon-row .watch i,section.sermons .sermon-row .download i{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:all ease .3s;transition:all ease .3s}
+section.sermons .sermon-row .watch:hover i,section.sermons .sermon-row .download:hover i{-webkit-transform:scale(1.3);-ms-transform:scale(1.3);transform:scale(1.3)}
+.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}

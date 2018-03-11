@@ -1,48 +1,32 @@
 <?php
 /**
- * Template Name: Sermons
+ * The template for displaying archive pages.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package ACStarter
  */
 
-get_header(); 
-
-while ( have_posts() ) : the_post(); 
-	get_template_part('template-parts/page-banner');
-endwhile; // End of the loop.
-?>
+get_header(); ?>
 <div class="wrapper-page">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			
-			<?php
-			while ( have_posts() ) : the_post(); ?>
-				<section class="intro">
-				<h1><?php the_title(); ?></h1>
-					<?php the_content(); ?>
-				</section>
-			<?php endwhile; // End of the loop. ?>
 
-			<?php
-			// set the date
-			$prevMonth = '';
+		<?php
+		if ( have_posts() ) : ?>
 
-			$wp_query = new WP_Query();
-			$wp_query->query(array(
-				'post_type'=>'sermon',
-				'posts_per_page' => -1,
-				'paged' => $paged,
-				'meta_key'	=> 'date',
-				'orderby'	=> 'meta_value_num',
-				'order'		=> 'DESC'
-			));
-			if ($wp_query->have_posts()) : ?>
+			<header class="page-header">
+				<?php
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+				?>
+			</header><!-- .page-header -->
 			<section class="sermons">
-		    <?php while ($wp_query->have_posts()) : $wp_query->the_post(); 
+			<?php
+			/* Start the Loop */
+			while ( have_posts() ) : the_post(); 
 
-		    	// get raw date
+			// get raw date
 				$date = get_field('date', false, false);
 				// make date object
 				$date = new DateTime($date);
@@ -58,14 +42,9 @@ endwhile; // End of the loop.
 
 		    ?>
 
-		    <?php 
-		    	if( $currentM != $prevMonth ) {
-		    		echo '<h2 class="month-sep">'.$date->format('M Y').'</h2>';
-		    		$prevMonth = $currentM;
-		    	}
-		     ?>
+		    
 
-		    <div class="sermon-row">
+		     	<div class="sermon-row">
 		    	<div class="date">
 		    	<span class="month"><?php echo $date->format('M'); ?></span>
 		    		<span class="day"><?php echo $date->format('j'); ?></span>
@@ -93,10 +72,19 @@ endwhile; // End of the loop.
 			    </div>
 		    </div>
 
-				<?php endwhile; ?>
-				</section>
-			<?php endif; ?>
-			
+				
+			<?php endwhile;
+
+			the_posts_navigation(); ?>
+			</section>
+			<?php
+
+		else :
+
+			get_template_part( 'template-parts/content', 'none' );
+
+		endif; ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
@@ -119,6 +107,7 @@ endwhile; // End of the loop.
 		</div>
 	</div>
 
+	
 </div>
 <?php
 get_footer();
