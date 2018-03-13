@@ -1638,6 +1638,8 @@ button:focus{outline:0}
 body,button,input,select,textarea{color:#404040;font-family:"Source Sans Pro",sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
 h1,h2,h3,h4,h5,h6{clear:both;text-transform:uppercase;letter-spacing:6px;font-weight:400}
 .entry-content h1{font-size:30px}
+section.intro h1{font-size:34px;color:#591a2b;width:100%;text-align:center;margin:0 0 60px 0}
+h2{margin:0 0 15px 0;color:#383838}
 p{margin:0 0 1.5em 0}
 dfn,cite,em,i{font-style:italic}
 blockquote{margin:0 1.5em}
@@ -1797,10 +1799,16 @@ html[xmlns] .flexslider .slides{display:block}
 .flex-control-thumbs .flex-active{opacity:1;cursor:default}
 @media screen and (max-width:860px){.flex-direction-nav .flex-prev{opacity:1;left:10px}
 .flex-direction-nav .flex-next{opacity:1;right:10px}
+}.widget-area{width:100%;margin:0 auto}
+@media screen and (min-width:600px){.widget-area{width:26%;float:right;margin-top:30px}
 }.widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
 .widget h2{font-size:16px}
 .widget ul,.widget li{list-style-type:none}
+.widget.event{background-color:#591a2b;padding:5%}
+.widget.event li.sideevent{margin:0 0 20px 0;background-color:#fff}
+.widget.event li.sideevent h3{font-size:16px;line-height:1.1}
+.widget.event li.sideevent a{color:#591a2b;padding:5%;display:block}
 *{-webkit-hyphens:none}
 .clear{clear:both}
 .wrapper{width:100%;margin:0 auto;padding:20px}
@@ -1811,9 +1819,6 @@ html[xmlns] .flexslider .slides{display:block}
 }@media screen and (min-width:1200px){.wrapper-page{width:70%;padding:0}
 }.content-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.content-area{width:66%;float:left;margin:0}
-}@media screen and (min-width:1200px){}
-.widget-area{width:100%;margin:0 auto}
-@media screen and (min-width:600px){.widget-area{width:26%;float:right;margin:0}
 }@media screen and (min-width:1200px){}
 .upper-bar{width:100%;height:10px;background-color:#c2c66a;float:left}
 section.top-header{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
@@ -1830,6 +1835,7 @@ section.top-header .new-btn a:hover,section.top-header .phonenum a:hover{backgro
 @media screen and (min-width:600px){.logo a,h1.logo a{width:300px}
 }.page-banner{width:100%;clear:both}
 footer.site-footer{width:100%;clear:both;text-align:center;padding:40px 0}
+footer.site-footer a{color:#383838}
 .social{width:100%;float:left;position:relative;text-align:center;margin:20px auto}
 .social .s-icon{display:inline-block}
 .social .s-icon a{display:block;background-color:#c2c66a;color:#fff;width:50px;height:50px;line-height:50px;border-radius:50%}
@@ -1879,6 +1885,15 @@ section.upcoming-events .event-card:hover{background-color:rgba(255,255,255,0.4)
 section.upcoming-events .event-card .datetime{color:#fff}
 section.upcoming-events .allevents{width:auto;display:inline-block;margin-top:30px}
 section.upcoming-events .allevents a{width:auto;display:block;padding:10px 20px;background-color:#c2c66a;color:#591a2b}
+section.events-page{width:100%;position:relative;float:left;text-align:center;color:#c2c66a;padding:40px 0}
+section.events-page .eventwrapper{width:90%;position:relative}
+@media screen and (min-width:600px){section.events-page .eventwrapper{margin:0 auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}
+}section.events-page .event-card{-webkit-flex-basis:30%;-ms-flex-preferred-size:30%;flex-basis:30%;text-align:center;padding:5px 5px 20px 5px;background-color:#591a2b;margin-bottom:30px}
+section.events-page .event-card h3{font-size:14px;color:#c2c66a}
+section.events-page .event-card:hover{box-shadow:0 0 19px -1px rgba(0,0,0,0.6)}
+section.events-page .event-card .datetime{color:#fff}
+section.events-page .allevents{width:auto;display:inline-block;margin-top:30px}
+section.events-page .allevents a{width:auto;display:block;padding:10px 20px;background-color:#c2c66a;color:#591a2b}
 section.staff{width:100%;position:relative}
 @media screen and (min-width:600px){section.staff{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-align-content:flex-start;-ms-flex-line-pack:start;align-content:flex-start}
 }section.staff .staff-card{width:90%;text-align:center;padding:2%;border:2px solid #c2c66a;margin:0 0 30px 0;background-color:rgba(194,198,106,0.2);-webkit-transition:all ease .3s;transition:all ease .3s}
@@ -1901,7 +1916,7 @@ section.sections .section{width:100%;float:left;margin:0 0 30px 0}
 section.sections .section .copy{width:100%}
 @media screen and (min-width:600px){section.sections .section .copy{width:60%;float:left}
 }section.sections .section .img{width:100%}
-@media screen and (min-width:600px){section.sections .section .img{width:30%;float:right}
+@media screen and (min-width:600px){section.sections .section .img{width:30%;float:right;margin:10px 0 0 0}
 }section.sermons{width:100%;float:left}
 section.sermons .month-sep{width:100%;float:left;color:#fff;background-color:#c2c66a;padding:10px}
 section.sermons .sermon-row{width:100%;border-bottom:4px solid #591a2b;padding:2%;background-color:#efefef;overflow:hidden}

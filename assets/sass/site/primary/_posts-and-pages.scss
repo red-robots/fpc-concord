@@ -262,6 +262,67 @@ section.upcoming-events {
 		}
 	}
 }
+section.events-page {
+	width: 100%;
+	position: relative;
+	float: left;
+	text-align: center;
+	
+	color: $color-green;
+	padding: 40px 0;
+	.eventwrapper {
+		width: 90%;
+		position: relative;
+		@media screen and (min-width: $tabwidth) {
+			margin: 0 auto;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: stretch;
+		}
+		@media screen and (min-width: $deskwidth) {
+			
+		}
+	}
+	.event-card {
+		flex-basis: 30%;
+		text-align: center;
+		padding: 5px 5px 20px 5px;
+		background-color: $color-red;
+		margin-bottom: 30px;
+		h3 {
+			font-size: 14px;
+			color: $color-green;
+			a {
+
+			}
+		}
+		&:hover {
+			// background-color: $color-gray;
+			-webkit-box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.6);
+-moz-box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.6);
+box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.6);
+
+		}
+		.datetime {
+			color: #fff;
+		}
+	}
+	.allevents {
+		width: auto;
+		display: inline-block;
+		margin-top: 30px;
+		a {
+			width: auto;
+			display: block;
+			padding: 10px 20px ;
+			background-color: $color-green;
+			color: $color-red;
+		}
+	}
+}
+
 section.staff {
 	width: 100%;
 	position: relative;
@@ -379,6 +440,7 @@ section.sections {
 			@media screen and (min-width: $tabwidth) {
 				width: 30%;
 				float: right;
+				margin: 10px 0 0 0;
 			}
 			@media screen and (min-width: $deskwidth) {
 				

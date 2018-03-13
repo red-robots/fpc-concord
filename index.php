@@ -95,35 +95,7 @@ if( $banner !='' ) {
 		</section>
 
 
-		<section class="quicklinks">
-			<h2>Quick Links</h2>
-			<div class="icon-wrap">
-				<div class="link">
-					<a href="<?php echo $link1 ?>">
-						<div class="icon"><i class="fas fa-calendar-alt fa-3x"></i></div>
-						<h3><?php echo $title1 ?></h3>
-					</a>
-				</div>
-				<div class="link">
-					<a href="<?php echo $link2 ?>">
-						<div class="icon"><i class="fas fa-user-plus fa-3x"></i></div>
-						<h3><?php echo $title2 ?></h3>
-					</a>
-				</div>
-				<div class="link">
-					<a href="<?php echo $link3 ?>">
-						<div class="icon"><i class="fal fa-newspaper fa-3x"></i></div>
-						<h3><?php echo $title3 ?></h3>
-					</a>
-				</div>
-				<div class="link">
-					<a href="<?php echo $link4 ?>">
-						<div class="icon"><i class="fas fa-phone fa-3x"></i></div>
-						<h3><?php echo $title4 ?></h3>
-					</a>
-				</div>
-			</div>
-		</section>
+		<?php get_template_part('inc/quicklinks'); ?>
 
 		<section class="upcoming-events">
 			<div class="eventwrapper">
@@ -139,8 +111,10 @@ if( $banner !='' ) {
 
 		   		 // get raw date
 				$date = get_field('date', false, false);
+				$enddate = get_field('end_date', false, false);
 				// make date object
 				$date = new DateTime($date);
+				$enddate = new DateTime($enddate);
 				// example: echo $date->format('j M Y');
 				// echo '<pre>';
 				// print_r($date);
@@ -155,7 +129,16 @@ if( $banner !='' ) {
 						
 						<h3><?php the_title(); ?></h3>
 						<div class="datetime">
-							<?php echo $date->format('j M Y | g:i A'); ?>
+							<?php 
+							if($date->format('g:i A') == '12:00 AM') {
+								echo $date->format('j M Y');
+							} else {
+								echo $date->format('j M Y | g:i A');
+							}
+							 
+							if( $enddate != '' ) :
+								echo ' - '.$enddate->format('j M Y'); 
+							 endif; ?>
 						</div>
 					</a>
 				</div>

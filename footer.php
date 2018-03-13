@@ -10,9 +10,15 @@
  */
 $address = get_field('address', 'option');
 $phone = get_field('phone_number', 'option');
+$email = get_field('email', 'option');
+$spambot = antispambot($email);
 $facebook = get_field('facebook_link', 'option');
 $twitter = get_field('twitter_link', 'option');
 $instagram = get_field('instagram_link', 'option');
+
+if( !is_front_page() ) {
+	get_template_part('inc/quicklinks'); 
+}
 ?>
 
 	</div><!-- #content -->
@@ -20,7 +26,7 @@ $instagram = get_field('instagram_link', 'option');
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrapper">
 			<section class="footer-address">
-				<?php echo $address . ' | ' . $phone; ?>
+				<?php echo $address . ' | ' . $phone . ' | <a href="'.$spambot.'">'.$spambot.'</a>'; ?>
 			</section>
 			<section class="social">
 				<?php if( $facebook ) { ?>

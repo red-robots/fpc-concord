@@ -21,6 +21,7 @@ endwhile; // End of the loop.
 			while ( have_posts() ) : the_post(); ?>
 
 			<section class="intro">
+			<h1><?php the_title(); ?></h1>
 				<?php the_content(); ?>
 			</section>
 
@@ -38,12 +39,27 @@ endwhile; // End of the loop.
 								<img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 							</div>
 						</div>
-					<?php endwhile; ?>
-				</section>
+					<?php endwhile; 
+				if( !is_page(45) ) { ?></section><?php } ?>
 			<?php endif; ?>
 
 			<?php endwhile; // End of the loop.
-			?>
+			
+
+			if(is_page(45)) : ?>
+
+			
+
+					<div class="section">
+						<div class="copy">
+							<?php the_field('directions_block'); ?>
+						</div>
+						<div class="img">
+							<?php the_field('map'); ?>
+						</div>
+					</div>
+
+					<?php if( is_page(45) ) { ?></sectino><?php } endif; ?>
 			</div>
 			<!-- wrapper -->
 		</main><!-- #main -->

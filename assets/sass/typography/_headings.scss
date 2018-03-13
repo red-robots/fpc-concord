@@ -9,3 +9,17 @@ h1, h2, h3, h4, h5, h6 {
 .entry-content h1 {
 	font-size: 30px;
 }
+section.intro {
+
+	h1 {
+		font-size: 34px;
+		color: $color-red;
+		width: 100%;
+		text-align: center;
+		margin: 0 0 60px 0;
+	}
+}
+h2 {
+	margin: 0 0 15px 0;
+	color: $color-gray;
+}
