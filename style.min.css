@@ -1855,9 +1855,11 @@ section.welcome .right .copy{line-height:1.2;font-size:16px}
 @media screen and (min-width:1200px){section.welcome .right .copy{font-size:18px}
 }section.welcome .btnlink{width:auto;display:inline-block}
 section.welcome .btnlink a{background-color:#c2c66a;color:#fff;-webkit-transition:all ease .3s;transition:all ease .3s;padding:10px;display:block}
-section.worship-schedule{width:100%;float:left;position:relative;text-align:center;background-color:#c2c66a}
-@media screen and (min-width:600px){section.worship-schedule{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}
-}section.worship-schedule h2{color:#591a2b;width:100%}
+section.worship-schedule{width:100%;float:left;position:relative;text-align:center;padding:30px 0;background-color:#c2c66a}
+section.worship-schedule h2{color:#591a2b;width:100%;float:left;margin:0 0 30px 0}
+section.worship-schedule section.times{width:100%;color:#fff}
+@media screen and (min-width:600px){section.worship-schedule section.times{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:space-evenly;-webkit-justify-content:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}
+}section.worship-schedule section.times .servicetime{font-size:20px}
 section.quicklinks{width:100%;float:left;position:relative;text-align:center;padding:50px 0;background-color:#fff}
 section.quicklinks h2{color:#591a2b;width:100%;margin:0 0 30px 0}
 section.quicklinks .icon-wrap{width:90%;margin:0 auto}
@@ -1869,7 +1871,7 @@ section.quicklinks .icon{width:100px;height:100px;line-height:120px;border-radiu
 section.quicklinks .icon i{color:#fff;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:all ease .2s;transition:all ease .2s}
 section.quicklinks .icon:hover i{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 section.upcoming-events{width:100%;position:relative;float:left;text-align:center;background-color:#591a2b;color:#c2c66a;padding:40px 0}
-section.upcoming-events .eventwrapper{width:100%;position:relative}
+section.upcoming-events .eventwrapper{width:90%;position:relative}
 @media screen and (min-width:600px){section.upcoming-events .eventwrapper{margin:0 auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}
 }section.upcoming-events .event-card{-webkit-flex-basis:20%;-ms-flex-preferred-size:20%;flex-basis:20%;text-align:center;padding:5px 5px 20px 5px}
 section.upcoming-events .event-card h3{font-size:14px;color:#c2c66a}

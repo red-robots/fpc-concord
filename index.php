@@ -25,6 +25,17 @@ setup_postdata( $post );
 	$welcomeCopy = get_field('welcome_text');
 	$welcomeLink = get_field('welcome_link');
 	$welcomeLinkText = get_field('welcome_link_text');
+
+
+// Quick Links
+$title1 = get_field('title', 'option');
+$link1 = get_field('link_1', 'option');
+$title2 = get_field('title_2', 'option');
+$link2 = get_field('link_2', 'option');
+$title3 = get_field('title_3', 'option');
+$link3 = get_field('link_3', 'option');
+$title4 = get_field('title_4', 'option');
+$link4 = get_field('link_4', 'option');
  
 wp_reset_postdata();
 
@@ -61,7 +72,26 @@ if( $banner !='' ) {
 
 		<section class="worship-schedule">
 			<h2>Worship Schedule</h2>
-			
+			<?php 
+			// query homepage
+			$post = get_post(20); 
+				setup_postdata( $post );
+ 				// run repeater
+ 				if( have_rows('service_times') ) : ?>
+				<section class="times">
+				<?php while( have_rows('service_times') ) : the_row();
+
+				$label = get_sub_field('label');
+				$time = get_sub_field('time');
+
+			?>
+				<div class="servicetime">
+					<div class="label"><?php echo $label; ?></div>
+					<div class="time"><?php echo $time; ?></div>
+				</div>
+			<?php endwhile; ?>
+			</section>
+		<?php endif; wp_reset_postdata(); ?>
 		</section>
 
 
@@ -69,27 +99,27 @@ if( $banner !='' ) {
 			<h2>Quick Links</h2>
 			<div class="icon-wrap">
 				<div class="link">
-					<a href="">
+					<a href="<?php echo $link1 ?>">
 						<div class="icon"><i class="fas fa-calendar-alt fa-3x"></i></div>
-						<h3>Calendar</h3>
+						<h3><?php echo $title1 ?></h3>
 					</a>
 				</div>
 				<div class="link">
-					<a href="">
+					<a href="<?php echo $link2 ?>">
 						<div class="icon"><i class="fas fa-user-plus fa-3x"></i></div>
-						<h3>Sign-ups</h3>
+						<h3><?php echo $title2 ?></h3>
 					</a>
 				</div>
 				<div class="link">
-					<a href="">
+					<a href="<?php echo $link3 ?>">
 						<div class="icon"><i class="fal fa-newspaper fa-3x"></i></div>
-						<h3>Newsletter Archive</h3>
+						<h3><?php echo $title3 ?></h3>
 					</a>
 				</div>
 				<div class="link">
-					<a href="">
+					<a href="<?php echo $link4 ?>">
 						<div class="icon"><i class="fas fa-phone fa-3x"></i></div>
-						<h3>Contact</h3>
+						<h3><?php echo $title4 ?></h3>
 					</a>
 				</div>
 			</div>
