@@ -24,17 +24,20 @@ endwhile; // End of the loop.
 					<h1><?php the_title(); ?></h1>
 					<?php the_content(); ?>
 				</section>
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-			
-			
 
-				
+				<?php if( is_page('sitemap') ) : 
+					echo '<section class="sitemap">';
+						
+						$args = array(
+								'title_li' =>'',
+								'exclude'  => '493',
+							);
+						wp_list_pages($args);
+					echo '</section>';
+				 endif; ?>
 
-			
-			
-		</main><!-- #main -->
-	</div><!-- #primary -->
+
+
 </div>
 <?php
 get_footer();

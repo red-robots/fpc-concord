@@ -49,7 +49,7 @@ endwhile; // End of the loop.
 		    ?>
 		    	<div class="staff-card">
 			    	<a href="#pop-<?php echo $dashedTitle; ?>" class="pop">
-			    		<img src="<?php echo $picture['url']; ?>" alt="<?php echo $picture['url']; ?>">
+			    		<img src="<?php echo $picture['url']; ?>" alt="<?php echo $picture['alt']; ?>">
 			    		<h3><?php the_title(); ?></h3>
 			    		<h4 class="title"><?php echo $pTitle; ?></h4>
 			    		<div class="email">
@@ -61,8 +61,14 @@ endwhile; // End of the loop.
 			    	<div id="pop-<?php echo $dashedTitle; ?>" class="pop-bio">
 			    	<div class="nav"></div>
 			    	<div class="pop-wrap">
-			    		<div class="pic"><img src="<?php echo $picture['url']; ?>" alt="<?php echo $picture['url']; ?>"></div>
-			    		<div class="bio"><?php echo $bio; ?></div>
+			    		<div class="pic"><img src="<?php echo $picture['url']; ?>" alt="<?php echo $picture['alt']; ?>"></div>
+			    		<div class="bio">
+			    			<h2><?php echo $pTitle; ?></h2>
+			    			<div class="email">
+			    				<a href="<?php echo $spammed; ?>"><?php echo $spammed; ?></a>
+			    			</div>
+			    			<?php echo $bio; ?>
+			    		</div>
 			    	</div>
 			    	</div>
 		    	</div>

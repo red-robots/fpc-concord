@@ -16,6 +16,10 @@ $facebook = get_field('facebook_link', 'option');
 $twitter = get_field('twitter_link', 'option');
 $instagram = get_field('instagram_link', 'option');
 
+// let's get a clean slate
+wp_reset_postdata();
+wp_reset_query();
+
 if( !is_front_page() ) {
 	get_template_part('inc/quicklinks'); 
 }
