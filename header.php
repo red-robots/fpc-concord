@@ -20,6 +20,8 @@
 <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.0.0/animate.min.css" rel="stylesheet" type="text/css">
 <!-- <script src="https://use.fontawesome.com/762c66dd2b.js"></script> -->
 <!-- <script src="https://use.fontawesome.com/8f931eabc1.js"></script> -->
+<script defer src="https://use.fontawesome.com/releases/5.0.6/js/all.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/5.0.6/js/v4-shims.js"></script>
 <?php 
 
 wp_head(); 
