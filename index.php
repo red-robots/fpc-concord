@@ -64,7 +64,7 @@ if( $banner !='' ) {
 				<div class="copy"><?php echo $welcomeCopy; ?></div>
 				<div class="btnlink">
 					<a href="<?php echo $welcomeLink;?>">
-					<?php echo $welcomeLinkText;?><i class="fas fa-chevron-circle-right"></i>
+					<?php echo $welcomeLinkText;?><i class="fas fa fa-chevron-circle-right"></i>
 					</a>
 				</div>
 			</div>

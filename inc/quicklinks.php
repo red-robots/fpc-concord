@@ -19,25 +19,25 @@ $link4 = get_field('link_4', 'option');
   <div class="icon-wrap">
     <div class="link">
       <a href="<?php echo $link1 ?>">
-        <div class="icon"><i class="fas fa-calendar-alt fa-3x"></i></div>
+        <div class="icon"><i class="fas fa fa-calendar-alt fa-3x"></i></div>
         <h3><?php echo $title1 ?></h3>
       </a>
     </div>
     <div class="link">
       <a href="<?php echo $link2 ?>">
-        <div class="icon"><i class="fas fa-user-plus fa-3x"></i></div>
+        <div class="icon"><i class="fas fa fa-user-plus fa-3x"></i></div>
         <h3><?php echo $title2 ?></h3>
       </a>
     </div>
     <div class="link">
       <a href="<?php echo $link3 ?>">
-        <div class="icon"><i class="fal fa-newspaper fa-3x"></i></div>
+        <div class="icon"><i class="fal fa fa-newspaper fa-3x"></i></div>
         <h3><?php echo $title3 ?></h3>
       </a>
     </div>
     <div class="link">
       <a href="<?php echo $link4 ?>">
-        <div class="icon"><i class="fas fa-phone fa-3x"></i></div>
+        <div class="icon"><i class="fas fa fa-phone fa-3x"></i></div>
         <h3><?php echo $title4 ?></h3>
       </a>
     </div>

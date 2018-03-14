@@ -42,7 +42,7 @@ $phone = get_field('phone_number', 'option');
 			
 			<div class="new-btn">
 				<a href="<?php echo $newbtn; ?>">
-					I'm New <i class="fas fa-chevron-circle-right"></i>
+					I'm New <i class="fas fa fa-chevron-circle-right"></i>
 				</a>
 			</div>
 
