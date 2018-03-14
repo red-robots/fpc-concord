@@ -36,16 +36,16 @@ if( !is_front_page() ) {
 				<?php if( $facebook ) { ?>
 					<div class="s-icon">
 						<a target="_blank" href="<?php echo $facebook; ?>">
-							<i class="fab fa fa-facebook-f fa-lg"></i>
+							<i class="fab fa-facebook-f fa-lg"></i>
 						</a>
 					</div>
 				<?php } if( $twitter ) { ?>
 					<div class="s-icon">
-						<a target="_blank" href="<?php echo $twitter; ?>"><i class="fab fa fa-twitter fa-lg"></i></a>
+						<a target="_blank" href="<?php echo $twitter; ?>"><i class="fab fa-twitter fa-lg"></i></a>
 					</div>
 				<?php } if( $instagram ) { ?>
 					<div class="s-icon">
-						<a target="_blank" href="<?php echo $instagram; ?>"><i class="fab fa fa-instagram fa-lg"></i></a>
+						<a target="_blank" href="<?php echo $instagram; ?>"><i class="fab fa-instagram fa-lg"></i></a>
 					</div>
 				<?php } ?>
 			</section>
