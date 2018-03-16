@@ -30,12 +30,19 @@ get_header(); ?>
 	<h2>Other Events</h2>
 	<div class="widget event">
 	
-	<?php
+	<?php 	// current date
+			$today = date("Y-m-d H:i:s"); 
+			
 			$wp_query = new WP_Query();
 			$wp_query->query(array(
 				'post_type'=>'event',
-				'posts_per_page' => 4,
+				'posts_per_page' => 10,
 				'paged' => $paged,
+				'meta_key' => 'date',
+			    'meta_value' => $today,
+			    'meta_compare' => '>=',
+			    'orderby' => 'meta_value',
+			    'order' => 'ASC',
 			));
 			if ($wp_query->have_posts()) : ?>
 		    <?php while ($wp_query->have_posts()) : $wp_query->the_post(); 

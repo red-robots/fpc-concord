@@ -64,7 +64,7 @@ if( $banner !='' ) {
 				<div class="copy"><?php echo $welcomeCopy; ?></div>
 				<div class="btnlink">
 					<a href="<?php echo $welcomeLink;?>">
-					<?php echo $welcomeLinkText;?><i class="fas fa-chevron-circle-right"></i>
+					<?php echo $welcomeLinkText;?> <i class="fas fa-chevron-circle-right"></i>
 					</a>
 				</div>
 			</div>
@@ -100,11 +100,17 @@ if( $banner !='' ) {
 		<section class="upcoming-events">
 			<div class="eventwrapper">
 			<?php
+			// get today
+			$today = date('Y-m-d H:i:s');
 			$wp_query = new WP_Query();
 			$wp_query->query(array(
 				'post_type'=>'event',
 				'posts_per_page' => 4,
-				'paged' => $paged,
+				'meta_key' => 'date',
+			    'meta_value' => $today,
+			    'meta_compare' => '>=',
+			    'orderby' => 'meta_value',
+			    'order' => 'ASC',
 			));
 			if ($wp_query->have_posts()) : ?>
 		    <?php while ($wp_query->have_posts()) : $wp_query->the_post(); 

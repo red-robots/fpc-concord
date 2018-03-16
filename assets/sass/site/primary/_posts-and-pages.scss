@@ -99,7 +99,8 @@ section.welcome {
 
 			display: block;
 			&:hover {
-
+				background-color: #fff;
+				color: $color-red;
 			}
 		}
 	}

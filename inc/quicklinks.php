@@ -18,7 +18,7 @@ $link4 = get_field('link_4', 'option');
   <h2>Quick Links</h2>
   <div class="icon-wrap">
     <div class="link">
-      <a href="<?php echo $link1 ?>">
+      <a href="<?php echo $link1 ?>" target="_blank">
         <div class="icon"><i class="fas fa-calendar-alt fa-3x"></i></div>
         <h3><?php echo $title1 ?></h3>
       </a>

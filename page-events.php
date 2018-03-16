@@ -28,11 +28,20 @@ endwhile; // End of the loop.
 
 
 			<?php
+			// current date
+			$today = date("Y-m-d H:i:s"); 
+
 			$wp_query = new WP_Query();
 			$wp_query->query(array(
 				'post_type'=>'event',
-				'posts_per_page' => -1,
+				'posts_per_page' => 10,
 				'paged' => $paged,
+				'meta_key' => 'date',
+			    'meta_value' => $today,
+			    'meta_compare' => '>=',
+			    'orderby' => 'meta_value',
+			    'order' => 'ASC',
+
 			));
 			if ($wp_query->have_posts()) : ?>
 			<section class="events-page">
@@ -57,6 +66,9 @@ endwhile; // End of the loop.
 		    	<div class="event-card">
 					<a href="<?php the_permalink(); ?>">
 					
+						<?php if ( has_post_thumbnail() ) {
+									the_post_thumbnail();
+							}  ?>
 						
 						<h3><?php the_title(); ?></h3>
 						<div class="datetime">
@@ -74,7 +86,11 @@ endwhile; // End of the loop.
 					</a>
 				</div>
 
-			<?php endwhile; ?>
+			<?php endwhile; 
+
+			pagi_posts_nav();
+
+			?>
 			</div>
 			</section>
 		<?php endif; ?>
