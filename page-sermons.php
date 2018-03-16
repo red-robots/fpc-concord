@@ -32,7 +32,7 @@ endwhile; // End of the loop.
 			$wp_query = new WP_Query();
 			$wp_query->query(array(
 				'post_type'=>'sermon',
-				'posts_per_page' => -1,
+				'posts_per_page' => 30,
 				'paged' => $paged,
 				'meta_key'	=> 'date',
 				'orderby'	=> 'meta_value_num',
@@ -93,7 +93,11 @@ endwhile; // End of the loop.
 			    </div>
 		    </div>
 
-				<?php endwhile; ?>
+				<?php endwhile; 
+
+				pagi_posts_nav();
+
+				?>
 				</section>
 			<?php endif; ?>
 			
