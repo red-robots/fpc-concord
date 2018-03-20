@@ -616,3 +616,120 @@ section.sermons {
 		}
 	}
 }
+// Give 
+section.cpages {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	@media screen and (min-width: $tabwidth) {
+
+	}
+	@media screen and (min-width: $deskwidth) {
+
+	}
+	.cpage {
+		flex-basis: 100%;
+		margin: 50px 0;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-between;
+		@media screen and (min-width: $tabwidth) {
+			flex-basis: 30%;
+		}
+		@media screen and (min-width: $deskwidth) {
+
+		}
+		h2 {
+			width: 100%;
+			color: $color-red;
+			text-align: center;
+		}
+		img {
+			width: 100%;
+		}
+		.btn {
+			width: 100%;
+			text-align: center;
+			text-transform: uppercase;
+			align-self: flex-end;
+			a {
+				display: block;
+				background-color: $color-green;
+				color: #fff;
+				padding: 15px 0;
+				@include transition(all ease .2s);
+				&:hover {
+					background-color: $color-red;
+				}
+			}
+		}
+	}
+}
+.donation-links {
+	h2 {
+		width: 100%;
+		text-align: center;
+		margin: 40px 0;
+	}
+}
+.linkouts {
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	margin-bottom: 50px;
+	@media screen and (min-width: $tabwidth) {
+
+	}
+
+	.linkbox {
+		flex-basis: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-between;
+		@media screen and (min-width: $tabwidth) {
+			flex-basis: 30%;
+		}
+		@media screen and (min-width: $deskwidth) {
+
+		}
+		h3 {
+			width: 100%;
+			color: $color-red;
+			text-align: center;
+			letter-spacing: 1px;
+		}
+		img {
+			width: 100%;
+		}
+		.btn {
+			width: 100%;
+			text-align: center;
+			text-transform: uppercase;
+			align-self: flex-end;
+			a {
+				display: block;
+				background-color: $color-green;
+				color: #fff;
+				padding: 15px 0;
+				@include transition(all ease .2s);
+				&:hover {
+					background-color: $color-red;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+

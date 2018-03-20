@@ -32,3 +32,21 @@ h2 {
 	margin: 0 0 15px 0;
 	color: $color-gray;
 }
+.sections {
+	h2 {
+		font-size: 34px;
+		color: $color-red;
+		width: 100%;
+		position: relative;
+		text-align: center;
+		margin: 0 0 60px 0;
+		&:after {
+			content: '';
+			border-bottom: 4px solid $color-red;
+			position: absolute;
+			bottom: -10px;
+			left: 47%;
+			width: 6%;
+		}
+	}
+}
