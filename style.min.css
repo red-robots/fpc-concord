@@ -592,12 +592,14 @@ button:focus{outline:0}
 body,button,input,select,textarea{color:#404040;font-family:"Source Sans Pro",sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
 h1,h2,h3,h4,h5,h6{clear:both;text-transform:uppercase;letter-spacing:6px;font-weight:400}
 .entry-content h1{font-size:30px}
-section.intro h1{font-size:34px;color:#591a2b;width:100%;position:relative;text-align:center;margin:0 0 60px 0}
+section.intro h1{font-size:34px;color:#591a2b;width:100%;position:relative;text-align:center;margin:50px 0 100px 0}
 section.intro h1:after{content:'';border-bottom:4px solid #591a2b;position:absolute;bottom:-10px;left:47%;width:6%}
 h2{margin:0 0 15px 0;color:#383838}
-.sections h2{font-size:34px;color:#591a2b;width:100%;position:relative;text-align:center;margin:0 0 60px 0}
-.sections h2:after{content:'';border-bottom:4px solid #591a2b;position:absolute;bottom:-10px;left:47%;width:6%}
-p{margin:0 0 1.5em 0}
+.sections h2{font-size:24px;color:#591a2b;width:100%;position:relative;text-align:left;margin:0 0 20px 0}
+.sections h2:after{content:'';border-bottom:4px solid #591a2b;position:absolute;bottom:-10px;left:0;width:6%}
+@media screen and (min-width:600px){.sections h2{font-size:18px}
+}@media screen and (min-width:1200px){.sections h2{font-size:24px}
+}p{margin:0 0 1.5em 0}
 dfn,cite,em,i{font-style:italic}
 blockquote{margin:0 1.5em}
 address{margin:0 0 1.5em}
