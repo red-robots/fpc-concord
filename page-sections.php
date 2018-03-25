@@ -29,14 +29,27 @@ endwhile; // End of the loop.
 				<section class="sections">
 					<?php while(have_rows('sections')) : the_row();
 						$copy = get_sub_field('section'); 
-						$img = get_sub_field('side_image'); 
+						// $img = get_sub_field('side_image'); 
 					?>
 						<div class="section">
 							<div class="copy">
 								<?php echo $copy; ?>
 							</div>
 							<div class="img">
-								<img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+								<?php 
+								$images = get_sub_field('side_image');
+								$size = 'full';
+								// echo '<pre>';
+								// print_r($images);
+								// echo '</pre>';
+								if( $images ) :
+									foreach( $images as $image ):
+								 ?>
+										<div class="single-image">
+											<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+										</div>
+									<?php endforeach; ?>
+								<?php endif; ?>
 							</div>
 						</div>
 					<?php endwhile; 

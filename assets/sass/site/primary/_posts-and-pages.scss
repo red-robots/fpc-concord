@@ -174,7 +174,7 @@ section.quicklinks {
 			flex-wrap: wrap;
 		}
 		@media screen and (min-width: $midwidth) {
-			width: 60%;
+			width: 90%;
 			flex-wrap: nowrap;
 		}
 	}
@@ -196,13 +196,13 @@ section.quicklinks {
 			width: 100%;
 			text-align: center;
 			@media screen and (min-width: $tabwidth) {
-				font-size:20px;
+				font-size:18px;
 			}
 			@media screen and (min-width: $midwidth) {
 				font-size: 14px;
 			}
 			@media screen and (min-width: $deskwidth) {
-				font-size: 20px;
+				font-size: 18px;
 			}
 		}
 	}
@@ -214,6 +214,8 @@ section.quicklinks {
 		margin: 0 auto;
 		background-color: $color-red;
 		color: #fff;
+		transform: scale(1);
+		@include transition(all ease .2s);
 		@media screen and (min-width: $tabwidth) {
 		
 		}
@@ -223,10 +225,9 @@ section.quicklinks {
 		
 		i {
 			color: #fff;
-			transform: scale(1);
-			@include transition(all ease .2s);
+			
 		}
-		&:hover i {
+		&:hover {
 			transform: scale(1.1);
 		}
 		
@@ -288,6 +289,10 @@ section.upcoming-events {
 			padding: 10px 20px ;
 			background-color: $color-green;
 			color: $color-red;
+			@include transition(all ease .3s);
+			&:hover {
+				background-color: #fff;
+			}
 		}
 	}
 }
@@ -478,6 +483,13 @@ section.sections {
 				width: 30%;
 				float: right;
 				margin: 10px 0 0 0;
+			}
+			.single-image {
+				width: 100%;
+				margin: 0 0 10px 0;
+				img {
+					width: 100%;
+				}
 			}
 			@media screen and (min-width: $deskwidth) {
 				

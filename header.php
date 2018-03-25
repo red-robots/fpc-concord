@@ -29,6 +29,7 @@ wp_head();
 
 $newbtn = get_field('im_new', 'option');
 $phone = get_field('phone_number', 'option');
+$address = get_field('address', 'option');
 
 ?>
 </head>
@@ -41,28 +42,35 @@ $phone = get_field('phone_number', 'option');
 	<header id="masthead" class="site-header" role="banner">
 		<section class="top-header ">
 			
-			<div class="new-btn">
-				<a href="<?php echo $newbtn; ?>">
-					I'm New <i class="fas fa-chevron-circle-right"></i>
-				</a>
+			<div class="col1">
+				<div class="new-btn">
+					<a href="<?php echo $newbtn; ?>">
+						I'm New <i class="fas fa-chevron-circle-right"></i>
+					</a>
+				</div>
 			</div>
+			
+			<div class="col2">
+				<?php if(is_home()) { ?>
+		            <h1 class="logo">
+			            <a href="<?php bloginfo('url'); ?>">
+			            	<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="First Pres Concord">
+			            </a>
+		            </h1>
+		        <?php } else { ?>
+		            <div class="logo">
+		            	<a href="<?php bloginfo('url'); ?>">
+			            	<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="First Pres Concord">
+			            </a>
+		            </div>
+		        <?php } ?>
+	        </div>
 
-			<?php if(is_home()) { ?>
-	            <h1 class="logo">
-		            <a href="<?php bloginfo('url'); ?>">
-		            	<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="First Pres Concord">
-		            </a>
-	            </h1>
-	        <?php } else { ?>
-	            <div class="logo">
-	            	<a href="<?php bloginfo('url'); ?>">
-		            	<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="First Pres Concord">
-		            </a>
-	            </div>
-	        <?php } ?>
-
-	        <div class="phonenum">
-	        	<a href="<?php echo 'tel:'.$phone; ?>"><?php echo $phone; ?></a>
+	        <div class="col3">
+		        <div class="phonenum">
+		        	<a href="<?php echo 'tel:'.$phone; ?>"><?php echo $phone; ?></a>
+		        	<div class="header-address"><?php echo $address; ?></div>
+		        </div>
 	        </div>
 
 			

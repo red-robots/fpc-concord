@@ -30,7 +30,7 @@ if( !is_front_page() ) {
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrapper">
 			<section class="footer-address">
-				<?php echo $address . ' | ' . $phone . ' | <a href="'.$spambot.'">'.$spambot.'</a>'; ?>
+				<?php echo $address . ' | ' . $phone . ' | <a href="mailto:'.$spambot.'">'.$spambot.'</a>'; ?>
 			</section>
 			<section class="social">
 				<?php if( $facebook ) { ?>

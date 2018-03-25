@@ -10,6 +10,10 @@ $title3 = get_field('title_3', 'option');
 $link3 = get_field('link_3', 'option');
 $title4 = get_field('title_4', 'option');
 $link4 = get_field('link_4', 'option');
+$title5 = get_field('title_5', 'option');
+$link5 = get_field('link_5', 'option');
+$title6 = get_field('title_6', 'option');
+$link6 = get_field('link_6', 'option');
 
  ?>
 
@@ -39,6 +43,18 @@ $link4 = get_field('link_4', 'option');
       <a href="<?php echo $link4 ?>">
         <div class="icon"><i class="fas fa-phone fa-3x"></i></div>
         <h3><?php echo $title4 ?></h3>
+      </a>
+    </div>
+    <div class="link">
+      <a href="<?php echo $link5 ?>">
+        <div class="icon"><i class="fal fa-child fa-3x"></i></div>
+        <h3><?php echo $title5 ?></h3>
+      </a>
+    </div>
+    <div class="link">
+      <a href="<?php echo $link6 ?>">
+        <div class="icon"><i class="fal fa-leaf fa-3x"></i></div>
+        <h3><?php echo $title6 ?></h3>
       </a>
     </div>
   </div>
