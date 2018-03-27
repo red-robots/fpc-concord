@@ -53,7 +53,7 @@ endwhile; // End of the loop.
 			    		<h3><?php the_title(); ?></h3>
 			    		<h4 class="title"><?php echo $pTitle; ?></h4>
 			    		<div class="email">
-			    			<a href="<?php echo $spammed; ?>"><i class="fas fa-envelope fa-lg"></i></a>
+			    			<a href="mailto:<?php echo $spammed; ?>"><i class="fas fa-envelope fa-lg"></i></a>
 			    		</div>
 		    		</a>
 		    	</div>

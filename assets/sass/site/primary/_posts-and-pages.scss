@@ -698,7 +698,7 @@ section.cpages {
 	align-items: stretch;
 	margin-bottom: 50px;
 	@media screen and (min-width: $tabwidth) {
-
+		flex-wrap: wrap;
 	}
 
 	.linkbox {
@@ -719,8 +719,9 @@ section.cpages {
 			text-align: center;
 			letter-spacing: 1px;
 		}
-		img {
+		img, .img, .img img {
 			width: 100%;
+			line-height: 0;
 		}
 		.btn {
 			width: 100%;

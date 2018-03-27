@@ -16,7 +16,7 @@ while ( have_posts() ) : the_post();
 	$subtitle = get_field('sub_title');
 	$excerpt = get_field('excerpt');
 
-endwhile; // End of the loop.
+
 ?>
 <div class="wrapper-page">
 	
@@ -29,7 +29,7 @@ endwhile; // End of the loop.
 
 	<?php 
 	/*
-		Section for the Child Page buttons
+		Section for the Extra Page buttons
 
 	*/
 		if( have_rows('buttons') ) : ?>
@@ -70,6 +70,7 @@ endwhile; // End of the loop.
 <section class="intro"><?php the_content(); ?></section>
 				
 	<?php 
+	endwhile; // End of the page loop.
 	/*
 
 		Query Child pages if on Main Give page

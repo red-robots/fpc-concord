@@ -20,23 +20,23 @@ while ( have_posts() ) : the_post();
 endwhile; // End of the loop.
 ?>
 <div class="wrapper-page">
-				<section class="intro">
-					<h1><?php the_title(); ?></h1>
-					<?php the_content(); ?>
-				</section>
+	<section class="intro">
+		<h1><?php the_title(); ?></h1>
+		<?php the_content(); ?>
+	</section>
 
-				<?php if( is_page('sitemap') ) : 
-					echo '<section class="sitemap">';
-						
-						$args = array(
-								'title_li' =>'',
-								'exclude'  => '493',
-							);
-						wp_list_pages($args);
-					echo '</section>';
-				 endif; ?>
+	<?php if( is_page('sitemap') ) : 
+		echo '<section class="sitemap">';
+			
+			$args = array(
+					'title_li' =>'',
+					'exclude'  => '493',
+				);
+			wp_list_pages($args);
+		echo '</section>';
+	 endif; ?>
 
-
+	 <?php get_template_part('inc/box-button-links'); ?>
 
 </div>
 <?php

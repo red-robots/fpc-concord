@@ -13,8 +13,8 @@ while ( have_posts() ) : the_post();
 	get_template_part('template-parts/page-banner');
 endwhile; // End of the loop.
  ?>
-asfdasfa
-	<div id="primary" class="content-area">
+
+	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 			<div class="wrapper-page">
 			<?php
