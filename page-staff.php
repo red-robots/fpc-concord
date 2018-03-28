@@ -63,6 +63,7 @@ endwhile; // End of the loop.
 			    	<div class="pop-wrap">
 			    		<div class="pic"><img src="<?php echo $picture['url']; ?>" alt="<?php echo $picture['alt']; ?>"></div>
 			    		<div class="bio">
+			    			<h1><?php the_title(); ?></h1>
 			    			<h2><?php echo $pTitle; ?></h2>
 			    			<div class="email">
 			    				<a href="<?php echo $spammed; ?>"><?php echo $spammed; ?></a>
@@ -74,7 +75,74 @@ endwhile; // End of the loop.
 		    	</div>
 		    <?php endwhile; ?>
 		    </section>
-		<?php endif; // End of the loop. ?>
+		<?php endif; // End of the loop. 
+
+		wp_reset_postdata();
+		wp_reset_query();
+		?>
+
+		<section class="dec-elders">
+			<?php while ( have_posts() ) : the_post(); 
+
+					$eldersTitle = get_field('elders_title');
+					$deaconsTitle = get_field('deacons_title');
+
+			?>
+
+			<section class="area">
+				<h2><?php echo $eldersTitle; ?></h2>
+					<?php if(have_rows('elders')) : ?>
+						<?php while(have_rows('elders')) : the_row(); 
+								$catTitle = get_sub_field('category_title');
+								//$people = get_sub_field('category_title');
+						?>
+								<div class="col">
+									<h3><?php echo $catTitle; ?></h3>
+									<?php if(have_rows('people')) : ?>
+										<?php while(have_rows('people')) : the_row(); 
+												$eldName = get_sub_field('elder_name');
+												
+										?>
+									<div class="eldname">
+										<?php echo $eldName; ?>
+									</div>
+
+									<?php endwhile; ?>
+									<?php endif; ?>	
+								</div>
+					<?php endwhile; ?>
+				<?php endif; ?>
+			</section>
+
+			<section class="area">
+				<h2><?php echo $deaconsTitle; ?></h2>
+					<?php if(have_rows('deacons')) : ?>
+						<?php while(have_rows('deacons')) : the_row(); 
+								$catTitle = get_sub_field('category_title');
+								//$people = get_sub_field('category_title');
+						?>
+								<div class="col">
+									<h3><?php echo $catTitle; ?></h3>
+									<?php if(have_rows('people')) : ?>
+										<?php while(have_rows('people')) : the_row(); 
+												$decName = get_sub_field('deacon_name');
+												
+										?>
+									<div class="eldname">
+										<?php echo $decName; ?>
+									</div>
+
+									<?php endwhile; ?>
+									<?php endif; ?>	
+								</div>
+					<?php endwhile; ?>
+				<?php endif; ?>
+			</section>
+
+				
+
+			<?php endwhile; // End of the loop. ?>
+		</section>
 		    </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

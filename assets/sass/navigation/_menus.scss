@@ -1,5 +1,6 @@
 .sticker {
 	width: 100%;
+	z-index: 99999;
 	position: relative;
 	background-color: rgba(#fff, .9);
 	border-bottom: 5px solid $color-green;
