@@ -28,7 +28,7 @@ endwhile; // End of the loop.
 			
 
 			
-			<section class="sections">
+			<section class="contact">
 				<div class="section">
 					<div class="copy">
 						<?php the_field('directions_block'); ?>

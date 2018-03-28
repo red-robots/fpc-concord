@@ -498,6 +498,43 @@ section.dec-elders {
 		}
 	}
 }
+section.contact {
+	width: 100%;
+	position: relative;
+	.section {
+		width: 100%;
+		float: left;
+		margin: 0 0 30px 0;
+		.copy {
+			width: 100%;
+			@media screen and (min-width: $tabwidth) {
+				width: 40%;
+				float: left;
+			}
+			@media screen and (min-width: $deskwidth) {
+				
+			}
+		}
+		.img {
+			width: 100%;
+			@media screen and (min-width: $tabwidth) {
+				width: 50%;
+				float: right;
+				margin: 10px 0 0 0;
+			}
+			.single-image {
+				width: 100%;
+				margin: 0 0 10px 0;
+				img {
+					width: 100%;
+				}
+			}
+			@media screen and (min-width: $deskwidth) {
+				
+			}
+		}
+	}
+}
 section.sections {
 	width: 100%;
 	position: relative;
@@ -508,7 +545,7 @@ section.sections {
 		.copy {
 			width: 100%;
 			@media screen and (min-width: $tabwidth) {
-				width: 60%;
+				width: 40%;
 				float: left;
 			}
 			@media screen and (min-width: $deskwidth) {
@@ -518,7 +555,7 @@ section.sections {
 		.img {
 			width: 100%;
 			@media screen and (min-width: $tabwidth) {
-				width: 30%;
+				width: 50%;
 				float: right;
 				margin: 10px 0 0 0;
 			}
