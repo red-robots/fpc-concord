@@ -59,7 +59,7 @@ endwhile; // End of the loop.
 			<?php endwhile; // End of the loop.
 			
 
-			if(is_page( array(45,288) )) : ?>
+			if(is_page( array(45) )) : ?>
 
 			
 
@@ -72,7 +72,7 @@ endwhile; // End of the loop.
 						</div>
 					</div>
 
-					<?php if( is_page( array(45,288) )) { ?></section><?php } endif; ?>
+					<?php if( is_page( array(45) )) { ?></section><?php } endif; ?>
 			</div>
 			<!-- wrapper -->
 		</main><!-- #main -->
