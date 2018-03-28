@@ -72,7 +72,7 @@ endwhile; // End of the loop.
 						</div>
 					</div>
 
-					<?php if( is_page(45) ) { ?></sectino><?php } endif; ?>
+					<?php if( is_page(array(45,288) ) { ?></section><?php } endif; ?>
 			</div>
 			<!-- wrapper -->
 		</main><!-- #main -->

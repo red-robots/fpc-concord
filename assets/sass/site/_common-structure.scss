@@ -296,7 +296,7 @@ section.anchors {
 		background-color: $color-green;
 		color: #fff;
 		@include transition(all ease .2s);
-		&hover {
+		&:hover {
 			background-color: $color-red;
 		}
 	}
