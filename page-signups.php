@@ -50,7 +50,7 @@ endwhile; // End of the loop.
 			</div>
 		</section>
 		<section class="basic-section">
-			<h2 id="<?php echo $saniT; ?>"><?php echo $titleLay; ?></h2>
+			<h2 id="<?php echo $saniT; ?>"><?php echo $formtitle; ?></h2>
 			<?php if($form) {echo do_shortcode($formOutput);} ?>
 		</section>
 	</section>
