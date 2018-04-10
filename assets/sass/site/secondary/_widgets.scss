@@ -8,15 +8,21 @@
 	@media screen and (min-width: $tabwidth) {
 		width: 26%;
 		float: right;
-		margin-top: 30px;
+		margin-top: 210px;
 	}
 	@media screen and (min-width: $deskwidth) {
-	
+		margin-top: 210px;
 	}
 }
 .widget {
 	margin: 0 0 1.5em;
-
+	a {
+		color: $color-red;
+		padding: 2px;
+		&:hover {
+			background-color: $color-green;
+		}
+	}
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;

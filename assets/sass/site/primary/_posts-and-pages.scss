@@ -545,7 +545,7 @@ section.sections {
 		.copy {
 			width: 100%;
 			@media screen and (min-width: $tabwidth) {
-				width: 40%;
+				width: 60%;
 				float: left;
 			}
 			@media screen and (min-width: $deskwidth) {
@@ -555,7 +555,7 @@ section.sections {
 		.img {
 			width: 100%;
 			@media screen and (min-width: $tabwidth) {
-				width: 50%;
+				width: 33%;
 				float: right;
 				margin: 10px 0 0 0;
 			}
