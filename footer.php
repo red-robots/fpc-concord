@@ -66,7 +66,7 @@ if( !is_front_page() ) {
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-690301152-1', 'auto');
+  ga('create', 'UA-69030153-1', 'auto');
   ga('send', 'pageview');
 
 </script>
