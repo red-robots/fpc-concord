@@ -84,7 +84,7 @@ endwhile; // End of the loop.
 			    		<?php } ?>
 			    	</div>
 			    	<div class="download">
-			    		<?php if( $watch != '') { ?>
+			    		<?php if( $download != '') { ?>
 				    		<a href="<?php echo $download; ?>">
 				    			<i class="fas fa-cloud-download-alt fa-lg"></i>
 				    		</a>
