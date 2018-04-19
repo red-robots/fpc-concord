@@ -9,9 +9,16 @@
 
 get_header(); 
 
-while ( have_posts() ) : the_post(); 
+
+// get the sermon page
+$post = get_post(51); 
+setup_postdata( $post );
+ 
 	get_template_part('template-parts/page-banner');
-endwhile; // End of the loop.
+ 
+wp_reset_postdata();
+	
+
 
 ?>
 <div class="wrapper-page">

@@ -137,13 +137,13 @@ if( $banner !='' ) {
 						<div class="datetime">
 							<?php 
 							if($date->format('g:i A') == '12:00 AM') {
-								echo $date->format('j M Y');
+								echo $date->format('M, j Y');
 							} else {
-								echo $date->format('j M Y | g:i A');
+								echo $date->format('M, j Y | g:i A');
 							}
 							 
 							if( $enddate != '' ) :
-								echo ' - '.$enddate->format('j M Y'); 
+								echo ' - '.$enddate->format('M, j Y'); 
 							 endif; ?>
 						</div>
 					</a>
