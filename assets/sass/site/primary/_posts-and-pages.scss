@@ -572,6 +572,38 @@ section.sections {
 		}
 	}
 }
+section.newsletters {
+	width: 100%;
+	float: left;
+	.newsletter-link {
+		width: 100%;
+		border-bottom: 4px solid $color-red;
+		padding: 2%;
+		background-color: #efefef;
+		a {
+				padding: 10px;
+				color: $color-red;
+				display: block;
+				clear: both;
+				&:hover {
+					background-color: #fff;
+				}
+			}
+		h3 {
+			font-size: 18px; 
+			margin: 0;
+		}
+	}
+	.month-sep {
+		width: 100%;
+		float: left;
+		color: #fff;
+		background-color: $color-green;
+		padding: 10px;
+		color: $color-red;
+
+	}
+}
 section.sermons {
 	width: 100%;
 	float: left;
@@ -581,6 +613,11 @@ section.sermons {
 		color: #fff;
 		background-color: $color-green;
 		padding: 10px;
+		color: $color-red;
+		h3 {
+			font-size: 18px; 
+
+		}
 	}
 	.sermon-row {
 		width: 100%;

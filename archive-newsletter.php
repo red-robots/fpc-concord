@@ -29,63 +29,32 @@ wp_reset_postdata();
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<section class="intro">
+			<section class="intro">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 				</section>
 			</header><!-- .page-header -->
-			<section class="sermons">
+			<section class="newsletters">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post(); 
 
 			// get raw date
-				$date = get_field('date', false, false);
-				// make date object
-				$date = new DateTime($date);
-				// example: echo $date->format('j M Y');
-		    	$pTitle = get_field('title');
-		    	$passage = get_field('passage');
-		    	$minister = get_field('minister');
-		    	$watch = get_field('watch');
-		    	$download = get_field('download');
-
-		    	$currentM = $date->format('M');
+				$date = get_the_date();
+		    	$currentM = get_the_date('M');
 		    	
 
 		    ?>
 
 		    
 
-		     	<div class="sermon-row">
-		    	<div class="date">
-		    	<span class="month"><?php echo $date->format('M'); ?></span>
-		    		<span class="day"><?php echo $date->format('j'); ?></span>
-		    	</div>
-		    	<div class="sermon">
-		    		<h3><?php echo $pTitle; ?></h3>
-		    		<h4 class="minister"><?php echo $minister; ?></h4>
-		    	</div>
-		    	<div class="passage"><?php echo $passage; ?></div>
-		    	<div class="downloads">
-			    	<div class="watch">
-				    	<?php if( $watch != '') { ?>
-				    		<a href="<?php echo $watch; ?>" target="_blank">
-				    			<i class="fas fa-video fa-lg"></i>
-				    		</a>
-			    		<?php } ?>
-			    	</div>
-			    	<div class="download">
-			    		<?php if( $watch != '') { ?>
-				    		<a href="<?php echo $download; ?>">
-				    			<i class="fas fa-cloud-download-alt fa-lg"></i>
-				    		</a>
-			    		<?php } ?>
-			    	</div>
-			    </div>
-		    </div>
+		     	<div class="newsletter-link">
+	     			<a href="<?php the_field('link_to_newsletter'); ?>" target="_blank">
+	     				<h3><?php the_title(); ?> <i class="fas fa-chevron-circle-right"></i></h3>
+	     			</a>
+	     		</div>
 
 				
 			<?php endwhile;
