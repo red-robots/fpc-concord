@@ -36,7 +36,7 @@ endwhile; // End of the loop.
 				'post_type'=>'event',
 				'posts_per_page' => 10,
 				'paged' => $paged,
-				'meta_key' => 'date',
+				'meta_key' => 'end_date',
 			    'meta_value' => $today,
 			    'meta_compare' => '>=',
 			    'orderby' => 'meta_value',

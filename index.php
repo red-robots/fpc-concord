@@ -106,7 +106,7 @@ if( $banner !='' ) {
 			$wp_query->query(array(
 				'post_type'=>'event',
 				'posts_per_page' => 4,
-				'meta_key' => 'date',
+				'meta_key' => 'end_date',
 			    'meta_value' => $today,
 			    'meta_compare' => '>=',
 			    'orderby' => 'meta_value',
