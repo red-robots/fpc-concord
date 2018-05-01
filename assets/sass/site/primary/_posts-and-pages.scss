@@ -130,7 +130,8 @@ section.worship-schedule {
 		@media screen and (min-width: $tabwidth) {
 			display: flex;
 			flex-direction: row;
-			justify-content: space-evenly;
+			justify-content: space-around;
+			align-items: center;
 		}
 		.servicetime {
 			font-size: 20px;
@@ -139,6 +140,15 @@ section.worship-schedule {
 			}
 			.time {
 
+			}
+		}
+		.weekly-sermon {
+			background-color: rgba(#fff, 1);
+			color: $color-red;
+			padding: 5px;
+			font-size: 20px;
+			h4 {
+				margin: 0;
 			}
 		}
 	}

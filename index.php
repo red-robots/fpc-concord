@@ -75,7 +75,15 @@ if( $banner !='' ) {
 			<?php 
 			// query homepage
 			$post = get_post(20); 
+
 				setup_postdata( $post );
+
+				$date = get_field('date');
+				$date = new DateTime($date);
+				$scripture = get_field('scripture');
+				$sermon_title = get_field('sermon_title');
+				$pastor = get_field('pastor');
+
  				// run repeater
  				if( have_rows('service_times') ) : ?>
 				<section class="times">
@@ -90,6 +98,17 @@ if( $banner !='' ) {
 					<div class="time"><?php echo $time; ?></div>
 				</div>
 			<?php endwhile; ?>
+
+				<div class="weekly-sermon">
+					<h4>Weekly Sermon</h4>
+					<?php if( $sermon_title ) echo $sermon_title . '<br>'; 
+							if( $scripture ) echo $scripture . ' ';
+							if( $date ) echo $date->format('M j, Y') . '<br>';
+							if( $pastor ) echo $pastor;
+					?>
+					<?php  ?>
+				</div>
+
 			</section>
 		<?php endif; wp_reset_postdata(); ?>
 		</section>
@@ -137,13 +156,13 @@ if( $banner !='' ) {
 						<div class="datetime">
 							<?php 
 							if($date->format('g:i A') == '12:00 AM') {
-								echo $date->format('M, j Y');
+								echo $date->format('M j, Y');
 							} else {
-								echo $date->format('M, j Y | g:i A');
+								echo $date->format('M j, Y | g:i A');
 							}
 							 
 							if( $enddate != '' ) :
-								echo ' - '.$enddate->format('M, j Y'); 
+								echo ' - '.$enddate->format('M j, Y'); 
 							 endif; ?>
 						</div>
 					</a>

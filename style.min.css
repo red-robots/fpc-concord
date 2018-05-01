@@ -853,8 +853,10 @@ section.welcome .btnlink a:hover{background-color:#fff;color:#591a2b}
 section.worship-schedule{width:100%;float:left;position:relative;text-align:center;padding:30px 0;background-color:#c2c66a}
 section.worship-schedule h2{color:#591a2b;width:100%;float:left;margin:0 0 30px 0}
 section.worship-schedule section.times{width:100%;color:#fff}
-@media screen and (min-width:600px){section.worship-schedule section.times{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:space-evenly;-webkit-justify-content:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}
+@media screen and (min-width:600px){section.worship-schedule section.times{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
 }section.worship-schedule section.times .servicetime{font-size:20px}
+section.worship-schedule section.times .weekly-sermon{background-color:white;color:#591a2b;padding:5px;font-size:20px}
+section.worship-schedule section.times .weekly-sermon h4{margin:0}
 section.quicklinks{width:100%;float:left;position:relative;text-align:center;padding:50px 0;background-color:#fff}
 section.quicklinks h2{color:#591a2b;width:100%;margin:0 0 30px 0}
 section.quicklinks .icon-wrap{width:90%;margin:0 auto;text-align:center}
