@@ -100,7 +100,7 @@ if( $banner !='' ) {
 			<?php endwhile; ?>
 
 				<div class="weekly-sermon">
-					<h4>Weekly Sermon</h4>
+					<h4>This Sunday</h4>
 					<?php if( $sermon_title ) echo $sermon_title . '<br>'; 
 							if( $scripture ) echo $scripture . ' ';
 							if( $date ) echo $date->format('M j, Y') . '<br>';
