@@ -79,7 +79,7 @@ if( $banner !='' ) {
 				setup_postdata( $post );
 
 				$date = get_field('date');
-				$date = new DateTime($date);
+				$ndate = new DateTime($date);
 				$scripture = get_field('scripture');
 				$sermon_title = get_field('sermon_title');
 				$pastor = get_field('pastor');
@@ -103,7 +103,7 @@ if( $banner !='' ) {
 					<h4>This Sunday</h4>
 					<?php if( $sermon_title ) echo $sermon_title . '<br>'; 
 							if( $scripture ) echo $scripture . ' ';
-							if( $date ) echo $date->format('M j, Y') . '<br>';
+							if( $date ) echo $ndate->format('M j, Y') . '<br>';
 							if( $pastor ) echo $pastor;
 					?>
 					<?php  ?>

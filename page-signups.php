@@ -21,7 +21,10 @@ while ( have_posts() ) : the_post();
 	$contentS = get_field('content_s');
 	$linkS = get_field('link_s');
 	$form = get_field('form');
-	$formtitle = get_field('title_e');
+	//$formtitle = get_field('title_e');
+	$titleE = get_field('title_e');
+	$contentE = get_field('content_e');
+	$linkE = get_field('link_e');
 	$saniT = sanitize_title_with_dashes($formtitle);
 	$formOutput = '[gravityform id="'.$form.'" title="false" description="false"]';
 
@@ -50,8 +53,12 @@ endwhile; // End of the loop.
 			</div>
 		</section>
 		<section class="basic-section">
-			<h2 id="<?php echo $saniT; ?>"><?php echo $formtitle; ?></h2>
-			<?php if($form) {echo do_shortcode($formOutput);} ?>
+			<h2 id="<?php echo $saniT; ?>"><?php echo $titleE ?></h2>
+			<?php //if($form) {echo do_shortcode($formOutput);} ?>
+			<?php echo $contentE; ?>
+			<div class="btnlink">
+				<a href="<?php echo $linkE; ?>">Sign Up  <i class="fas fa-chevron-circle-right"></i></a>
+			</div>
 		</section>
 	</section>
 
