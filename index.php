@@ -114,7 +114,7 @@ if( $banner !='' ) {
 		</section>
 
 
-		<?php get_template_part('inc/quicklinks'); ?>
+		
 
 		<section class="upcoming-events">
 			<div class="eventwrapper">
@@ -173,6 +173,8 @@ if( $banner !='' ) {
 				<a href="<?php bloginfo('url'); ?>/events">All Events</a>
 			</div>
 		</section>
+
+		<?php get_template_part('inc/quicklinks'); ?>
 
 
 		</main><!-- #main -->
