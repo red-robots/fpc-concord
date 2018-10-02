@@ -101,10 +101,13 @@ endwhile; // End of the loop.
 									<?php if(have_rows('people')) : ?>
 										<?php while(have_rows('people')) : the_row(); 
 												$eldName = get_sub_field('elder_name');
-												
+												$elEmail = get_sub_field('email');
+												$elEmail = antispambot($elEmail);
 										?>
 									<div class="eldname">
-										<?php echo $eldName; ?>
+										<?php if( $elEmail ) {echo '<a href="mailto:'.$elEmail.'">';} ?>
+											<?php echo $eldName; ?>
+										<?php if( $elEmail ) {echo '</a>';} ?>
 									</div>
 
 									<?php endwhile; ?>
@@ -126,10 +129,13 @@ endwhile; // End of the loop.
 									<?php if(have_rows('people')) : ?>
 										<?php while(have_rows('people')) : the_row(); 
 												$decName = get_sub_field('deacon_name');
-												
+												$decEmail = get_sub_field('email');
+												$decEmail = antispambot($decEmail);
 										?>
 									<div class="eldname">
-										<?php echo $decName; ?>
+										<?php if( $decEmail ) {echo '<a href="mailto:'.$decEmail.'">';} ?>
+											<?php echo $decName; ?>
+										<?php if( $decEmail ) {echo '</a>';} ?>
 									</div>
 
 									<?php endwhile; ?>
