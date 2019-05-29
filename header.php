@@ -48,6 +48,11 @@ $address = get_field('address', 'option');
 						I'm New <i class="fas fa-chevron-circle-right"></i>
 					</a>
 				</div>
+				<div class="clear"></div>
+				<div class="phonenum">
+		        	<a href="<?php echo 'tel:'.$phone; ?>"><?php echo $phone; ?></a>
+		        	<div class="header-address"><?php echo $address; ?></div>
+		        </div>
 			</div>
 			
 			<div class="col2">
@@ -67,9 +72,15 @@ $address = get_field('address', 'option');
 	        </div>
 
 	        <div class="col3">
-		        <div class="phonenum">
-		        	<a href="<?php echo 'tel:'.$phone; ?>"><?php echo $phone; ?></a>
-		        	<div class="header-address"><?php echo $address; ?></div>
+		        <div class="x-link">
+		        	<a href="">
+			        	<div class="img">
+			        		<img src="<?php bloginfo('template_url'); ?>/images/fpc-concord-prayer.png">
+			        	</div>
+			        	<div class="desc">
+			        		The Commons – a Concord Prayer Space
+			        	</div>
+		        	</a>
 		        </div>
 	        </div>
 

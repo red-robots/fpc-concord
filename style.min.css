@@ -790,19 +790,28 @@ html[xmlns] .flexslider .slides{display:block}
 .basic-section{width:100%;margin:0 0 30px 0}
 .upper-bar{width:100%;height:10px;background-color:#c2c66a;float:left}
 section.top-header{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
-@media screen and (min-width:600px){section.top-header{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;width:90%;margin:30px auto}
-}@media screen and (min-width:600px){section.top-header .col1,section.top-header .col2,section.top-header .col3{-webkit-flex-basis:33%;-ms-flex-preferred-size:33%;flex-basis:33%}
+@media screen and (min-width:600px){section.top-header{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;width:90%;margin:30px auto;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+}@media screen and (min-width:600px){section.top-header .col1{-webkit-flex-basis:33%;-ms-flex-preferred-size:33%;flex-basis:33%}
+}@media screen and (min-width:600px){section.top-header .col2{-webkit-flex-basis:33%;-ms-flex-preferred-size:33%;flex-basis:33%}
+}@media screen and (min-width:600px){section.top-header .col3{-webkit-flex-basis:33%;-ms-flex-preferred-size:33%;flex-basis:33%}
 }section.top-header .new-btn{width:auto;text-transform:uppercase;font-size:20px}
-@media screen and (min-width:600px){section.top-header .new-btn{float:left}
+@media screen and (min-width:600px){section.top-header .new-btn{float:left;width:50%}
 }section.top-header .new-btn a{display:block;background-color:#591a2b;padding:10px 10px 10px 10px;text-decoration:none;-webkit-transition:all ease .3s;transition:all ease .3s;color:#fff;border:1px solid #591a2b}
 section.top-header .new-btn a:hover{color:#591a2b;background-color:#fff}
 @media screen and (min-width:600px){section.top-header .new-btn{margin:40px 0 0 0}
 }section.top-header .phonenum{width:auto;text-transform:uppercase;font-size:20px}
-@media screen and (min-width:600px){section.top-header .phonenum{float:right}
+@media screen and (min-width:600px){section.top-header .phonenum{float:left}
 }section.top-header .phonenum .header-address{font-size:13px}
 section.top-header .phonenum a{display:block;color:#591a2b;text-decoration:none;-webkit-transition:all ease .3s;transition:all ease .3s}
 @media screen and (min-width:600px){section.top-header .phonenum{margin:40px 0 0 0}
-}header#masthead{width:100%;text-align:center;position:relative}
+}section.top-header .x-link{width:100%}
+@media screen and (min-width:600px){section.top-header .x-link{width:60%;float:right}
+}section.top-header .x-link a{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+section.top-header .x-link a .img{width:25%}
+section.top-header .x-link a .img img{width:100%}
+section.top-header .x-link a .desc{width:70%;color:#591a2b}
+section.top-header .x-link a .desc a{color:#591a2b}
+header#masthead{width:100%;text-align:center;position:relative}
 .logo,h1.logo{width:300px;margin:10px auto}
 @media screen and (min-width:600px){.logo,h1.logo{width:300px;margin:0 auto}
 }@media screen and (min-width:1200px){}

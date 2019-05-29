@@ -80,11 +80,23 @@ section.top-header {
 		justify-content: space-between;
 		width: 90%;
 		margin: 30px auto;
+		align-items: center;
 	}
 	@media screen and (min-width: $deskwidth) {
 		
 	}
-	.col1, .col2, .col3 {
+	.col1{
+		@media screen and (min-width: $tabwidth) {
+			flex-basis: 33%;
+		}
+	}
+	.col2 {
+		@media screen and (min-width: $tabwidth) {
+			flex-basis: 33%;
+		}
+	}
+	
+	.col3 {
 		@media screen and (min-width: $tabwidth) {
 			flex-basis: 33%;
 		}
@@ -95,6 +107,7 @@ section.top-header {
 		font-size: 20px;
 		@media screen and (min-width: $tabwidth) {
 			float: left;
+			width: 50%;
 		}
 		a {
 			display: block;
@@ -124,7 +137,7 @@ section.top-header {
 		text-transform: uppercase;
 		font-size: 20px;
 		@media screen and (min-width: $tabwidth) {
-			float: right;
+			float: left;
 		}
 		.header-address {
 			font-size: 13px;
@@ -147,6 +160,33 @@ section.top-header {
 		}
 		@media screen and (min-width: $tabwidth) {
 			margin: 40px 0 0 0;
+		}
+	}
+	.x-link {
+	width: 100%;
+	@media screen and (min-width: $tabwidth) {
+		width: 60%;
+		float: right;
+	}
+		a {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: center;
+			.img {
+				width: 25%;
+				img {
+					width: 100%;
+				}
+			}
+			.desc {
+				width: 70%;
+				color: $color-red;
+				a {
+					color: $color-red;
+				}
+			}
 		}
 	}
 }
