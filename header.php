@@ -73,7 +73,7 @@ $address = get_field('address', 'option');
 
 	        <div class="col3">
 		        <div class="x-link">
-		        	<a href="">
+		        	<a href="https://www.thecommonsprayerroom.com/" target="_blank">
 			        	<div class="img">
 			        		<img src="<?php bloginfo('template_url'); ?>/images/fpc-concord-prayer.png">
 			        	</div>
