@@ -64,8 +64,40 @@ div {
 }
 .upper-bar {
 	width: 100%;
-	height: 10px; 
+	// height: 10px; 
+	padding: 5px 0;
+	background-color: $color-dark-green;
+	float: left;
+	color: #fff;
+	.tel {
+		width: 100%;
+		font-size: 18px;
+		float: left;
+		text-align: center;
+		@media screen and (min-width: $tabwidth) {
+			width: auto;
+		}
+		a {
+			color: #fff;
+		}
+	}
+	.add {
+		width: 100%;
+		font-size: 14px;
+		float: right;
+		text-align: center;
+		@media screen and (min-width: $tabwidth) {
+			width: auto;
+		}
+	}
+}
+.lower-bar {
+	width: 100%;
+	text-align: center;
 	background-color: $color-green;
+	padding: 5px 0;
+	color: #fff;
+	font-size: 20px;
 	float: left;
 }
 section.top-header {
@@ -195,6 +227,7 @@ header#masthead {
 	width: 100%;
 	text-align: center;
 	position: relative;
+	float: left;
 }
 /* Logo */
 .logo , h1.logo {

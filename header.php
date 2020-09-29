@@ -30,13 +30,24 @@ wp_head();
 $newbtn = get_field('im_new', 'option');
 $phone = get_field('phone_number', 'option');
 $address = get_field('address', 'option');
+$donate = get_field('donate_mess', 'option');
 
 ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-<div class="upper-bar"></div>
+<div class="upper-bar">
+	<div class="wrapper">
+		<div class="tel"><a href="<?php echo 'tel:'.$phone; ?>"><?php echo $phone; ?></a></div>
+		<div class="add"><?php echo $address; ?></div>
+	</div>
+</div>
+<?php if( $donate != '' ) { ?>
+	<div class="lower-bar">
+		<?php echo $donate; ?>
+	</div>
+<?php } ?>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
@@ -49,10 +60,10 @@ $address = get_field('address', 'option');
 					</a>
 				</div>
 				<div class="clear"></div>
-				<div class="phonenum">
-		        	<a href="<?php echo 'tel:'.$phone; ?>"><?php echo $phone; ?></a>
-		        	<div class="header-address"><?php echo $address; ?></div>
-		        </div>
+				<!-- <div class="phonenum">
+		        	<a href="<?php echo 'tel:'.$phone; ?>"><?php echo $phone; ?></a> 
+		        	 <div class="header-address"><?php echo $address; ?></div> 
+		        </div>-->
 			</div>
 			
 			<div class="col2">
