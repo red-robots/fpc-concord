@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package ACStarter
+ * @package ACStarter0
  */
 
 get_header();

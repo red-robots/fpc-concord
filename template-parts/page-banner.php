@@ -5,8 +5,9 @@ $noBanner = get_field('no_banner');
 // echo '<pre>';
 // print_r($noBanner);
 // echo '</pre>';
+
 // set to empty if no banner is checked.
-if( $noBanner != '' ) {
+if( $noBanner[0] != 'no' ) {
 	$banner = '';
 	$default = '';
 }
@@ -14,8 +15,8 @@ if( $noBanner != '' ) {
 // echo '<pre>';
 // 	print_r($banner);
 // echo '</pre>';
-
-if( $banner ) : ?>
+// echo $banner['url'];
+if( $banner != '') : ?>
 	<div class="page-banner">
 		<img src="<?php echo $banner['url']; ?>" alt="<?php echo $banner['alt']; ?>">
 	</div>
