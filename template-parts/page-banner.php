@@ -7,7 +7,7 @@ $noBanner = get_field('no_banner');
 // echo '</pre>';
 
 // set to empty if no banner is checked.
-if( $noBanner[0] != 'no' ) {
+if( $noBanner[0] == 'no' ) {
 	$banner = '';
 	$default = '';
 }
