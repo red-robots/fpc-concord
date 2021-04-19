@@ -267,11 +267,16 @@ section.upcoming-events {
 		}
 	}
 	.event-card {
+		width: auto;
 		flex-basis: 40%;
 		text-align: center;
 		padding: 5px 5px 20px 5px;
 		width: 90%;
 		margin: 0 auto 30px auto;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		@media screen and (min-width: $midwidth) {
 			flex-basis: 20%;
 		}
@@ -287,6 +292,11 @@ section.upcoming-events {
 		}
 		.datetime {
 			color: #fff;
+		}
+		a {
+			display: block;
+			
+
 		}
 	}
 	.allevents {
@@ -342,6 +352,9 @@ section.events-page {
 
 			}
 		}
+		a {
+			display: block;
+		}
 		&:hover {
 			// background-color: $color-gray;
 			-webkit-box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.6);
@@ -367,7 +380,7 @@ box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.6);
 	}
 }
 section.newsposts {
-	
+
 }
 section.staff {
 	width: 100%;
