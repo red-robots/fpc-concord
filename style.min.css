@@ -309,10 +309,12 @@ html[xmlns] .flexslider .slides{display:block}
 .clear{clear:both}
 .wrapper{width:100%;margin:0 auto;padding:20px}
 .wrapper-page{width:100%;margin:0 auto;padding:20px;margin-top:30px}
+.wrapper-blog{width:100%;margin:0 auto;padding:20px;margin-top:30px}
 .content-area{width:100%;margin:0 auto}
 .btnlink{width:auto;display:inline-block}
 .btnlink a{background-color:#c2c66a;color:#fff;-webkit-transition:all ease .3s;transition:all ease .3s;padding:10px;display:block}
 .btnlink a:hover{background-color:#fff;color:#591a2b}
+article.post{width:100%;float:left}
 .basic-section{width:100%;margin:0 0 30px 0}
 .upper-bar{width:100%;padding:5px 0;background-color:#527337;float:left;color:#fff}
 .upper-bar .tel{width:100%;font-size:18px;float:left;text-align:center}
@@ -514,6 +516,7 @@ button.menu-toggle{display:none}
 .widget-area{width:26%;float:right;margin-top:210px}
 .wrapper{width:100%}
 .wrapper-page{width:90%}
+.wrapper-blog{width:90%}
 .content-area{width:66%;float:left;margin:0}
 .upper-bar .tel{width:auto}
 .upper-bar .add{width:auto}
@@ -569,6 +572,7 @@ section.upcoming-events .event-card{-ms-flex-preferred-size:20%;flex-basis:20%}
 .widget-area{margin-top:210px}
 .wrapper{width:90%;padding:0}
 .wrapper-page{width:70%;padding:0}
+.wrapper-blog{width:50%;padding:0}
 section.welcome .right .copy{font-size:18px}
 section.quicklinks .link h3{font-size:18px}
 }@media screen and (max-width:860px){.flex-direction-nav .flex-prev{opacity:1;left:10px}

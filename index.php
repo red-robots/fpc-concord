@@ -124,7 +124,7 @@ if( $banner !='' ) {
 			$wp_query = new WP_Query();
 			$wp_query->query(array(
 				'post_type'=>'event',
-				'posts_per_page' => 4,
+				'posts_per_page' => 2,
 				'meta_key' => 'end_date',
 			    'meta_value' => $today,
 			    'meta_compare' => '>=',
@@ -168,6 +168,39 @@ if( $banner !='' ) {
 					</a>
 				</div>
 			<?php endwhile; endif; wp_reset_postdata(); ?>
+
+
+
+
+
+
+
+
+
+			<?php $wp_query = new WP_Query();
+			$wp_query->query(array(
+				'post_type'=>'post',
+				'posts_per_page' => 2,
+			));
+			if ($wp_query->have_posts()) : ?>
+		    <?php while ($wp_query->have_posts()) : $wp_query->the_post(); 
+
+		    ?>
+				<div class="event-card">
+					<a href="<?php the_permalink(); ?>">
+					<?php if ( has_post_thumbnail() ) {
+							the_post_thumbnail();
+						}  ?>
+						
+						<h3><?php the_title(); ?></h3>
+						
+					</a>
+				</div>
+			<?php endwhile; endif; wp_reset_postdata(); ?>
+
+
+
+
 			</div>
 			<div class="btn allevents">
 				<a href="<?php bloginfo('url'); ?>/events">All Events</a>

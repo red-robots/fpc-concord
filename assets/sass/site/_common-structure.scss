@@ -29,6 +29,19 @@ div {
 		padding: 0px;
 	}
 }
+.wrapper-blog {
+	width: 100%;
+	margin: 0px auto;
+	padding: 20px;
+	margin-top: 30px;
+	@media screen and (min-width: $tabwidth) {
+		width: 90%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width:50%;
+		padding: 0px;
+	}
+}
 .content-area {
 	width: 100%;
 	margin: 0px auto;
@@ -57,6 +70,11 @@ div {
 			color: $color-red;
 		}
 	}
+}
+article.post {
+	width: 100%;
+	float: left;
+	
 }
 .basic-section {
 	width: 100%;
