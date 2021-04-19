@@ -202,9 +202,9 @@ if( $banner !='' ) {
 
 
 			</div>
-			<div class="btn allevents">
+	<!-- 		<div class="btn allevents">
 				<a href="<?php bloginfo('url'); ?>/events">All Events</a>
-			</div>
+			</div> -->
 		</section>
 
 		<?php get_template_part('inc/quicklinks'); ?>
