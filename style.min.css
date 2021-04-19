@@ -473,13 +473,16 @@ section.cpages .cpage .btn{width:100%;text-align:center;text-transform:uppercase
 section.cpages .cpage .btn a{display:block;background-color:#c2c66a;color:#fff;padding:15px 0;-webkit-transition:all ease .2s;transition:all ease .2s}
 section.cpages .cpage .btn a:hover{background-color:#591a2b}
 .donation-links h2{width:100%;text-align:center;margin:40px 0}
-.linkouts{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;margin-bottom:50px}
-.linkouts .linkbox{-ms-flex-preferred-size:100%;flex-basis:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
-.linkouts .linkbox h3{width:100%;color:#591a2b;text-align:center;letter-spacing:1px}
-.linkouts .linkbox img,.linkouts .linkbox .img,.linkouts .linkbox .img img{width:100%;line-height:0}
-.linkouts .linkbox .btn{width:100%;text-align:center;text-transform:uppercase;-ms-flex-item-align:end;align-self:flex-end}
-.linkouts .linkbox .btn a{display:block;background-color:#c2c66a;color:#fff;padding:15px 0;-webkit-transition:all ease .2s;transition:all ease .2s}
-.linkouts .linkbox .btn a:hover{background-color:#591a2b}
+.newsouts{-ms-flex-wrap:wrap;flex-wrap:wrap}
+.newsouts .linkbox{margin-bottom:30px}
+.linkouts{-ms-flex-wrap:nowrap;flex-wrap:nowrap}
+.linkouts,.newsouts{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;margin-bottom:50px}
+.linkouts .linkbox,.newsouts .linkbox{-ms-flex-preferred-size:100%;flex-basis:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.linkouts .linkbox h3,.newsouts .linkbox h3{width:100%;color:#591a2b;text-align:center;letter-spacing:1px}
+.linkouts .linkbox img,.linkouts .linkbox .img,.linkouts .linkbox .img img,.newsouts .linkbox img,.newsouts .linkbox .img,.newsouts .linkbox .img img{width:100%;line-height:0}
+.linkouts .linkbox .btn,.newsouts .linkbox .btn{width:100%;text-align:center;text-transform:uppercase;-ms-flex-item-align:end;align-self:flex-end}
+.linkouts .linkbox .btn a,.newsouts .linkbox .btn a{display:block;background-color:#c2c66a;color:#fff;padding:15px 0;-webkit-transition:all ease .2s;transition:all ease .2s}
+.linkouts .linkbox .btn a:hover,.newsouts .linkbox .btn a:hover{background-color:#591a2b}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
@@ -561,8 +564,8 @@ section.sermons .sermon-row .passage{-ms-flex-preferred-size:25%;flex-basis:25%;
 section.sermons .sermon-row .downloads{-ms-flex-preferred-size:10%;flex-basis:10%;width:auto;float:none}
 section.sermons .sermon-row .watch,section.sermons .sermon-row .download{float:none}
 section.cpages .cpage{-ms-flex-preferred-size:30%;flex-basis:30%}
-.linkouts{-ms-flex-wrap:wrap;flex-wrap:wrap}
-.linkouts .linkbox{-ms-flex-preferred-size:30%;flex-basis:30%}
+.linkouts,.newsouts{-ms-flex-wrap:wrap;flex-wrap:wrap}
+.linkouts .linkbox,.newsouts .linkbox{-ms-flex-preferred-size:30%;flex-basis:30%}
 }@media screen and (min-width:900px){section.quicklinks .icon-wrap{width:90%;-ms-flex-wrap:nowrap;flex-wrap:nowrap}
 section.quicklinks .link{width:20%}
 section.quicklinks .link h3{font-size:14px}

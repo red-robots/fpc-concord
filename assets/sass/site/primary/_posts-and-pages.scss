@@ -826,10 +826,19 @@ section.cpages {
 		margin: 40px 0;
 	}
 }
+.newsouts {
+	flex-wrap: wrap;
+	.linkbox {
+		margin-bottom: 30px;
+	}
+}
 .linkouts {
+	flex-wrap: nowrap;
+}
+.linkouts, .newsouts {
 	width: 100%;
 	display: flex;
-	flex-wrap: nowrap;
+	
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: stretch;

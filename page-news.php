@@ -22,7 +22,7 @@ endwhile; // End of the loop.
 
 	<section class="donation-links sections">
       <!-- <h2>Donation Links</h2> -->
-      <div class="linkouts">
+      <div class="newsouts">
 		<?php $wp_query = new WP_Query();
 			$wp_query->query(array(
 				'post_type'=>'post',
