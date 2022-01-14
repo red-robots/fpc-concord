@@ -31,7 +31,7 @@ $newbtn = get_field('im_new', 'option');
 $phone = get_field('phone_number', 'option');
 $address = get_field('address', 'option');
 $donate = get_field('donate_mess', 'option');
-
+$social_media = get_social_media_links();
 ?>
 </head>
 
@@ -82,18 +82,28 @@ $donate = get_field('donate_mess', 'option');
 		        <?php } ?>
 	        </div>
 
-	        <div class="col3">
+      <div class="col3">
+        <?php if ($social_media) { ?>
+        <div class="social-media-links social">
+          <?php foreach ($social_media as $k=>$v) { ?>
+            <span class="s-icon"><a href="<?php echo $v['url'] ?>" aria-label="<?php echo $k ?>" target="_blank"><i class="<?php echo $v['icon'] ?> fa-lg" aria-hidden="true"></i></a></span>
+          <?php } ?>
+        </div> 
+        <?php } ?>
+      </div>
+
+	        <!-- <div class="col3">
 		        <div class="x-link">
 		        	<a href="https://www.thecommonsprayerroom.com/" target="_blank">
 			        	<div class="img">
-			        		<img src="<?php bloginfo('template_url'); ?>/images/fpc-concord-prayer.png">
+			        		<img src="<?php //bloginfo('template_url'); ?>/images/fpc-concord-prayer.png">
 			        	</div>
 			        	<div class="desc">
 			        		The Commons – a Concord Prayer Space
 			        	</div>
 		        	</a>
 		        </div>
-	        </div>
+	        </div> -->
 
 			
 		</section><!-- wrapper -->

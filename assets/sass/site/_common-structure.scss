@@ -393,3 +393,23 @@ section.anchors {
 		}
 	}
 }
+
+/* Social Media */
+.social .s-icon {
+  margin: 0 2px;
+  a {
+    transition: all ease .3s;
+    &:hover {
+      background-color: #527337;
+    }
+  }
+}
+.servicetime.stnew {
+  a {
+    color: #191970;
+    &:hover {
+      color: #0999f3;
+    }
+  }
+}
+

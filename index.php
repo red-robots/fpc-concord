@@ -85,19 +85,16 @@ if( $banner !='' ) {
 				$pastor = get_field('pastor');
 
  				// run repeater
- 				if( have_rows('service_times') ) : ?>
+ 				if( have_rows('service_times_new') ) : ?>
 				<section class="times">
-				<?php while( have_rows('service_times') ) : the_row();
 
-				$label = get_sub_field('label');
-				$time = get_sub_field('time');
-
-			?>
-				<div class="servicetime">
-					<div class="label"><?php echo $label; ?></div>
-					<div class="time"><?php echo $time; ?></div>
-				</div>
-			<?php endwhile; ?>
+        <?php while( have_rows('service_times_new') ) : the_row();
+          if( $info = get_sub_field('service_time_info') ) { ?>
+            <div class="servicetime stnew">
+              <div class="label"><?php echo preg_replace("/<p[^>]*>(?:\s|&nbsp;)*<\/p>/", '', $info); ?></div>
+            </div>
+          <?php } ?>
+        <?php endwhile; ?>
 
 				<div class="weekly-sermon">
 					<h4>This Sunday</h4>
