@@ -32,23 +32,7 @@ if( !is_front_page() ) {
 			<section class="footer-address">
 				<?php echo $address . ' | ' . $phone . ' | <a href="mailto:'.$spambot.'">'.$spambot.'</a>'; ?>
 			</section>
-			<section class="social">
-				<?php if( $facebook ) { ?>
-					<div class="s-icon">
-						<a target="_blank" href="<?php echo $facebook; ?>">
-							<i class="fab fa-facebook-f fa-lg"></i>
-						</a>
-					</div>
-				<?php } if( $twitter ) { ?>
-					<div class="s-icon">
-						<a target="_blank" href="<?php echo $twitter; ?>"><i class="fab fa-twitter fa-lg"></i></a>
-					</div>
-				<?php } if( $instagram ) { ?>
-					<div class="s-icon">
-						<a target="_blank" href="<?php echo $instagram; ?>"><i class="fab fa-instagram fa-lg"></i></a>
-					</div>
-				<?php } ?>
-			</section>
+			<section id="footer-social-links" class="social"><?php /* See custom.js */ ?></section>
 	</div><!-- wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

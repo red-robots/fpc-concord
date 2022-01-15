@@ -112,4 +112,13 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	new WOW().init();
 
+
+  /* Footer Social Media Links */
+  if( $(".social-media-links .s-icon").length ) {
+    $("#footer-social-links").html( $(".social-media-links").html() );
+  } else {
+    $("#footer-social-links").remove();
+  } 
+
+
 });// END #####################################    END
